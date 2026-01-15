@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* İdamar Mermer benzeri renk paleti */
+  --background: #f8f6f3;
+  /* Açık bej/krem arka plan */
+  --foreground: #1a1a1a;
+  /* Koyu metin */
+
+  /* Ana Renkler */
+  --cream: #f8f6f3;
+  /* Ana arka plan */
+  --cream-dark: #ebe7e0;
+  /* Vurgu alanları için */
+  --charcoal: #2d2d2d;
+  /* Başlıklar */
+  --grey-dark: #4a4a4a;
+  /* Alt başlıklar */
+  --grey-medium: #6b6b6b;
+  /* Paragraf metni */
+  --grey-light: #a8a8a8;
+  /* Devre dışı metin */
+
+  /* Aksan Renkler */
+  --gold: #b8860b;
+  /* Premium vurgu */
+  --gold-light: #d4a853;
+  /* Hover durumu */
+  
+  /* Logo Kırmızısı - İnce detaylar için */
+  --accent-red: #c41e3a;
+  --accent-red-light: #d44a5e;
+
+  /* UI Öğeleri */
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.15);
+
+  /* Footer */
+  --footer-bg: #1a1a1a;
+  --footer-text: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Genel Stiller */
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Scroll bar stili */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey-medium);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--charcoal);
 }

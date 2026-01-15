@@ -1,65 +1,194 @@
+import Link from "next/link";
 import Image from "next/image";
+import HeroSlider from "./components/HeroSlider";
+
+// Ürün kategorileri
+const products = [
+  {
+    id: "mezar-tasi",
+    title: "Mezar Taşı",
+    description: "Kaliteli mermer ve granitten, uzun ömürlü ve estetik mezar taşı modelleri.",
+    image: "/mezar.png",
+  },
+  {
+    id: "anit",
+    title: "Anıt",
+    description: "Özel tasarım anıt mezar ve şehitlik projeleri.",
+    image: "/anit1.png",
+  },
+  {
+    id: "tezgah",
+    title: "Tezgah",
+    description: "Mutfak ve banyo için granit, çimstone ve kuvars tezgah çözümleri.",
+    image: "/tezgah.png",
+  },
+  {
+    id: "cesme",
+    title: "Çeşme",
+    description: "Geleneksel ve modern tasarımlarla mermer ve taş hayrat çeşmeleri.",
+    image: "/cesme.png",
+  },
+  {
+    id: "somine",
+    title: "Şömine",
+    description: "Doğal taş ve mermerden özel tasarım şömine modelleri.",
+    image: "/somine.png",
+  },
+  {
+    id: "merdiven",
+    title: "Merdiven",
+    description: "Mermer ve granit merdiven basamaklarıyla mekanlarınıza şıklık katın.",
+    image: "/merdiven.png",
+  },
+  {
+    id: "mermer-kaplama",
+    title: "Mermer Kaplama",
+    description: "Dış ve iç cepheleriniz için estetik ve dayanıklı mermer kaplama çözümleri.",
+    image: "/mermer_kaplama.png",
+  },
+  {
+    id: "mermer-doseme",
+    title: "Mermer Döşeme",
+    description: "Mekanlarınıza ferahlık katan yüksek kaliteli mermer zemin döşemeleri.",
+    image: "/mermer_doseme.png",
+  },
+  {
+    id: "harpusta",
+    title: "Harpuşta",
+    description: "Duvarlarınızı koruyan ve estetik tamamlayan özel kesim harpuşta modelleri.",
+    image: "/harpusta.png",
+  },
+  {
+    id: "denizlik",
+    title: "Denizlik",
+    description: "Pencere önleri için su yalıtımı sağlayan şık mermer denizlikler.",
+    image: "/denizlik.png",
+  },
+  {
+    id: "mermer-supurgelik",
+    title: "Mermer Süpürgelik",
+    description: "Zemin ve duvar birleşimlerinde kusursuz detaylar için mermer süpürgelikler.",
+    image: "/mermer_supurgelik.png",
+  },
+  {
+    id: "mermer-bordur",
+    title: "Mermer Bordür",
+    description: "Zemin ve duvar tasarımlarınızı zenginleştiren dekoratif mermer bordürler.",
+    image: "/mermer_bordur.png",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+
+      {/* Hero Section */}
+      <HeroSlider />
+
+      {/* Ürün Kategorileri */}
+      <section className="py-24 bg-[var(--cream)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-[0.3em] text-[var(--grey-medium)] mb-4">
+              Koleksiyonumuz
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[var(--charcoal)] tracking-tight">
+              Çalışmalarımız
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="group cursor-pointer"
+              >
+                {/* Ürün Kutusu */}
+                <div className="aspect-[3/4] bg-[var(--cream-dark)] mb-4 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-500">
+                  {!product.image.startsWith("/images/") ? (
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      fill
+                      style={{ objectPosition: "center 12%" }}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-[var(--grey-light)]/20 to-[var(--grey-medium)]/30 group-hover:scale-105 transition-transform duration-500" />
+                  )}
+                </div>
+                <h3 className="text-xl font-semibold text-[var(--charcoal)] mb-2 group-hover:text-[var(--gold)] transition-colors">
+                  {product.title}
+                </h3>
+                <p className="text-sm text-[var(--grey-medium)] leading-relaxed mb-4">
+                  {product.description}
+                </p>
+                <Link
+                  href={`/${product.id}`}
+                  className="inline-flex items-center text-sm font-medium text-[var(--gold)] hover:text-[var(--gold-light)] transition-colors group/link"
+                >
+                  Daha fazlası için
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Öne Çıkan Özellikler */}
+      <section className="py-24 bg-[var(--cream-dark)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              { title: "Doğal Doku", desc: "Her parça eşsiz ve doğal. Doğanın sanatı elinizin altında.", icon: "🪨", highlight: false },
+              { title: "Üstün Kalite", desc: "Yüksek dayanıklılık standartları. Yıllarca kullanım garantisi.", icon: "✨", highlight: true },
+              { title: "Usta İşçilik", desc: "Yılların deneyimiyle şekillendi. Detaylara özen.", icon: "🔧", highlight: false },
+            ].map((item, index) => (
+              <div key={index} className="text-center group">
+                <div className={`text-4xl mb-4 ${item.highlight ? 'relative' : ''}`}>
+                  {item.icon}
+                  {item.highlight && <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-[var(--accent-red)]"></span>}
+                </div>
+                <h3 className="text-xl font-bold text-[var(--charcoal)] mb-3 uppercase tracking-wider">
+                  {item.title}
+                </h3>
+                <p className="text-[var(--grey-medium)] leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-[var(--charcoal)] text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
+            Projeniz İçin Bize Ulaşın
+          </h2>
+          <p className="text-gray-400 mb-8 text-lg">
+            Mekanlarınıza değer katacak doğal taş çözümleri için hemen iletişime geçin.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/iletisim"
+            className="inline-block px-10 py-4 bg-[var(--gold)] text-white font-medium hover:bg-[var(--gold-light)] transition-colors duration-300 uppercase tracking-wider text-sm"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            İletişim
+          </Link>
         </div>
-      </main>
+      </section>
+
     </div>
   );
 }
