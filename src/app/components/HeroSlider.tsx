@@ -16,13 +16,15 @@ export default function HeroSlider() {
         {
             id: 1,
             image: '/slider-new-1.png',
+            mobileImage: '/slider-phone-1.png',
             title: 'Öz Sivas Mermer',
             subtitle: 'Doğanın sanatını mekanlarınıza taşıyoruz. ',
             path: 'Anasayfa'
         },
         {
             id: 2,
-            image: '/slider-new-2.png',
+            image: '/slider-2.png',
+            mobileImage: '/slider-phone-2.png',
             title: 'Öz Sivas Mermer',
             subtitle: 'Doğanın sanatını mekanlarınıza taşıyoruz.',
             path: 'Anasayfa '
@@ -30,6 +32,7 @@ export default function HeroSlider() {
         {
             id: 3,
             image: '/slider-new-3.png',
+            mobileImage: '/slider-phone-3.png',
             title: 'Öz Sivas Mermer',
             subtitle: 'Doğanın sanatını mekanlarınıza taşıyoruz.',
             path: 'Anasayfa'
@@ -63,14 +66,32 @@ export default function HeroSlider() {
                     <SwiperSlide key={slide.id} className="relative w-full h-full">
                         {/* Arkaplan Görseli */}
                         <div className="relative w-full h-full">
-                            <Image
-                                src={slide.image}
-                                alt={slide.subtitle}
-                                fill
-                                priority={slide.id === 1}
-                                className="object-cover"
-                                quality={90}
-                            />
+                            {/* Desktop Image */}
+                            <div className={`relative w-full h-full ${slide.mobileImage ? 'hidden md:block' : ''}`}>
+                                <Image
+                                    src={slide.image}
+                                    alt={slide.subtitle}
+                                    fill
+                                    priority={slide.id === 1}
+                                    className="object-cover"
+                                    quality={90}
+                                />
+                            </div>
+
+                            {/* Mobile Image (If exists) */}
+                            {slide.mobileImage && (
+                                <div className="relative w-full h-full md:hidden">
+                                    <Image
+                                        src={slide.mobileImage}
+                                        alt={slide.subtitle}
+                                        fill
+                                        priority={slide.id === 1}
+                                        className="object-cover"
+                                        quality={90}
+                                    />
+                                </div>
+                            )}
+
                             {/* Karartma Katmanı */}
                             <div className="absolute inset-0 bg-black/20" />
                         </div>
