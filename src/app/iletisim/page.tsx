@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "İletişim | Sivas Mermer - Adres ve Telefon Bilgileri",
+    description:
+        "Sivas Mermer iletişim bilgileri. Adres, telefon ve konum bilgileri için tıklayın. Mermer ve granit ihtiyaçlarınız için hemen teklif alın.",
+};
+
 export default function ContactPage() {
     return (
         <main className="pt-24 min-h-screen bg-[var(--background)]">

@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Hakkımızda | Sivas Mermer - Tarihçemiz ve Değerlerimiz",
+    description:
+        "Sivas Mermer olarak sektördeki tecrübemiz, uzman ekibimiz ve müşteri memnuniyeti odaklı yaklaşımımızla mermer ve granit işlerinde güvenilir çözüm ortağınızız.",
+};
+
 export default function AboutPage() {
     return (
         <main className="pt-24 min-h-screen bg-[var(--background)]">

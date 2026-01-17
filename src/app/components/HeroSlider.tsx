@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectFade, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, EffectFade, Navigation, Keyboard } from 'swiper/modules';
 import Image from 'next/image';
 
 // Swiper stillerini içe aktar
@@ -37,9 +37,13 @@ export default function HeroSlider() {
     ];
 
     return (
-        <div className="relative w-full h-[100svh] md:h-[calc(100vh-80px)] min-h-[600px] bg-neutral-900">
+        <div className="relative w-full h-[100vh] md:h-[calc(100vh-80px)] min-h-[600px] bg-neutral-900">
             <Swiper
-                modules={[Autoplay, Pagination, EffectFade, Navigation]}
+                modules={[Autoplay, Pagination, EffectFade, Navigation, Keyboard]}
+                keyboard={{
+                    enabled: true,
+                }}
+                grabCursor={true}
                 effect={'fade'}
                 speed={1000}
                 autoplay={{
@@ -73,7 +77,7 @@ export default function HeroSlider() {
 
                         {/* İçerik Katmanı */}
                         <div className="absolute inset-0 z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="flex flex-col justify-between h-full py-20 sm:py-32">
+                            <div className="flex flex-col justify-between h-full pt-20 pb-12 sm:py-32">
 
                                 {/* Sol Üst Başlık (Sabit gibi görünen) */}
                                 {/* Sol Üst Başlık (Sabit gibi görünen) */}
@@ -89,7 +93,7 @@ export default function HeroSlider() {
                                 {/* Sağ Alt Ürün İsmi */}
                                 <div className="self-end max-w-md w-full animate-fade-in-up">
                                     <div className="bg-black/60 backdrop-blur-sm p-6 sm:p-8 border-l-4 border-white/80">
-                                        <h2 className="text-2xl sm:text-3xl font-light text-white tracking-wide uppercase animate-subtitle">
+                                        <h2 className="text-lg sm:text-3xl font-light text-white tracking-wide uppercase animate-subtitle">
                                             {slide.subtitle}
                                         </h2>
                                         <div className="w-12 h-1 bg-white mt-4 opacity-80" />

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ProductImage from "../components/ProductImage";
 
 // Ürün Verileri
@@ -63,6 +64,13 @@ const products = [
         image: "/bazalt.png",
     },
 ];
+
+
+export const metadata: Metadata = {
+    title: "Ürünler | Sivas Mermer - Granit, Kuvars ve Doğal Taş Çeşitleri",
+    description:
+        "Geniş ürün yelpazemiz: Granit, Porselen, Kuars (Çimstone, Belenco), Mermer, Traverten ve daha fazlası. Her zevke ve bütçeye uygun taş çözümleri.",
+};
 
 export default function ProductsPage() {
     return (

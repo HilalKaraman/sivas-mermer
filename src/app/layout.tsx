@@ -15,8 +15,82 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sivas Mermer | Mermer, Doğal Taş, Kuvars Tezgah",
-  description: "Kaliteli Sivas mermeri, doğal taş ve kuvars tezgah ürünleri. Estetik, dayanıklı ve zamansız çözümler.",
+  metadataBase: new URL("https://sivasmermer.com.tr"), // Replace with actual domain
+  title: {
+    default: "Sivas Mermer | Mermer, Doğal Taş, Granit ve Mezar Taşı",
+    template: "%s | Sivas Mermer",
+  },
+  description:
+    "Sivas'ta kaliteli mermer, granit, doğal taş, mezar taşı, mutfak tezgahı ve anıt mezar hizmetleri. Uzman işçilik ve uygun fiyatlarla hizmetinizdeyiz.",
+  keywords: [
+    "Sivas Mermer",
+    "Sivas Granit",
+    "Mezar Taşı Sivas",
+    "Mutfak Tezgahı",
+    "Mermer Dekorasyon",
+    "Doğal Taş",
+    "Çimstone",
+    "Belenco",
+    "Granit Tezgah",
+  ],
+  authors: [{ name: "Sivas Mermer" }],
+  creator: "Sivas Mermer",
+  publisher: "Sivas Mermer",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "Sivas Mermer | Kaliteli Mermer ve Granit İşçiliği",
+    description:
+      "Sivas'ta mermer ve granit ihtiyaçlarınız için güvenilir adres. Mezar taşı, mutfak tezgahı ve özel tasarım mermer işleri.",
+    url: "https://sivasmermer.com.tr",
+    siteName: "Sivas Mermer",
+    locale: "tr_TR",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg", // Make sure this image exists or create it
+        width: 1200,
+        height: 630,
+        alt: "Sivas Mermer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sivas Mermer",
+    description: "Sivas'ta kaliteli mermer ve granit çözümleri.",
+    images: ["/og-image.jpg"], // Reusing OG image
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/icons/favicon.ico",
+    apple: [
+      { url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "manifest",
+        url: "/icons/site.webmanifest",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

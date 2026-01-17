@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import HeroSlider from "./components/HeroSlider";
@@ -77,6 +78,13 @@ const products = [
     image: "/mermer_bordur.png",
   },
 ];
+
+
+export const metadata: Metadata = {
+  title: "Sivas Mermer - Kaliteli Mermer ve Granit Çözümleri",
+  description:
+    "Sivas Mermer ile mezar taşı, mutfak tezgahı, anıt ve mermer dekorasyon işlerinizde kaliteli ve güvenilir hizmet alın. Sivas'ın en köklü mermer atölyesi.",
+};
 
 export default function Home() {
   return (
