@@ -42,7 +42,7 @@ export default function Footer() {
                     <div>
                         <h4 className="text-lg font-semibold mb-4 uppercase tracking-wider">İletişim</h4>
                         <ul className="space-y-3 text-gray-400 text-sm">
-                            <li className="whitespace-nowrap">📍 Mehmet Akif Ersoy Mah. 36. Sokak No:37 Merkez / Sivas</li>
+                            <li className="whitespace-normal">📍 Mehmet Akif Ersoy Mah. 36. Sokak No:37 Merkez / Sivas</li>
                             <li>📞 +90 (346) 211 48 27</li>
                             <li>✉️ info@sivasmermer.com</li>
                             <li>
