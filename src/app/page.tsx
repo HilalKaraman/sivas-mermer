@@ -7,9 +7,15 @@ import HeroSlider from "./components/HeroSlider";
 const products = [
   {
     id: "mezar-tasi",
-    title: "Mezar Taşı",
+    title: "Mermer Mezar",
     description: "Kaliteli mermer ve granitten, uzun ömürlü ve estetik mezar taşı modelleri.",
-    image: "/mezar.png",
+    image: "/mezar_sedat.png",
+  },
+  {
+    id: "mermer-bastasi",
+    title: "Mermer Baş Taşı",
+    description: "Estetik ve dayanaklı, özel tasarım mermer baş taşları.",
+    image: "/mermer-bas-tasi.png",
   },
   {
     id: "anit",
@@ -57,7 +63,7 @@ const products = [
     id: "harpusta",
     title: "Harpuşta",
     description: "Duvarlarınızı koruyan ve estetik tamamlayan özel kesim harpuşta modelleri.",
-    image: "/harpusta.png",
+    image: "/harpusta_modern.png",
   },
   {
     id: "denizlik",
@@ -76,6 +82,12 @@ const products = [
     title: "Mermer Bordür",
     description: "Zemin ve duvar tasarımlarınızı zenginleştiren dekoratif mermer bordürler.",
     image: "/mermer_bordur.png",
+  },
+  {
+    id: "kaldirim-tasi-bordur",
+    title: "Kaldırım Taşı Bordür",
+    description: "Estetik ve dayanıklı kaldırım taşı ve bordür uygulamaları.",
+    image: "/kaldirim_tasi_bordur.png",
   },
 ];
 
