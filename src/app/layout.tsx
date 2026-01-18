@@ -113,17 +113,31 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Sivas Mermer",
-              "image": "https://sivasmermer.com/logo.jpeg",
-              "description": "Sivas'ta kaliteli mermer üretimi ve satışı.",
+              "image": "https://sivasmermer.com.tr/logo.jpeg",
+              "description": "Sivas'ta kaliteli mermer, granit ve doğal taş çözümleri.",
+              "telephone": "+903462114827",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Sivas Merkez",
-                "addressLocality": "Sivas",
+                "streetAddress": "Mehmet Akif Ersoy Mah. 36. Sokak No:37",
+                "addressLocality": "Merkez",
+                "addressRegion": "Sivas",
+                "postalCode": "58000",
                 "addressCountry": "TR"
               },
-              "url": "https://sivasmermer.com",
-              "telephone": "+90 555 555 55 55", // Placeholder, user can update
-              "priceRange": "₺₺"
+              "url": "https://sivasmermer.com.tr",
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "08:00",
+                "closes": "18:00"
+              }
             })
           }}
         />

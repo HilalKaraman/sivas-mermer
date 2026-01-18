@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import HeroSlider from "./components/HeroSlider";
-
-import { products } from "../data/products";
+import { categories } from "../data/products";
 
 export const metadata: Metadata = {
   title: "Sivas Mermer - Kaliteli Mermer ve Granit Çözümleri",
@@ -31,7 +30,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product) => (
+            {categories.map((product) => (
               <div
                 key={product.id}
                 className="group cursor-pointer"

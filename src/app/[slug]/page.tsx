@@ -1,69 +1,82 @@
-import { products } from "../../data/products";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { products } from "../../data/products";
 import { Metadata } from "next";
 
+// Only search from products (materials)
+const allItems = [...products];
+
 type Props = {
-    params: Promise<{ slug: string }>;
+    params: { slug: string };
 };
 
-// SSG: Build time generation for all keys
+// SSG: Generate all static paths at build time
 export async function generateStaticParams() {
-    return products.map((product) => ({
-        slug: product.id,
+    return allItems.map((item) => ({
+        slug: item.id,
     }));
 }
 
 // Dynamic Metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
-    const product = products.find((p) => p.id === slug);
+    const item = allItems.find((p) => p.id === slug);
 
-    if (!product) {
+    if (!item) {
         return {
-            title: "Ürün Bulunamadı - Sivas Mermer",
+            title: "Sayfa Bulunamadı - Sivas Mermer",
         };
     }
 
     return {
-        title: `${product.title} - Sivas Mermer`,
-        description: `${product.title} modelleri ve fiyatları. ${product.description}`,
+        title: `${item.title} - Sivas Mermer`,
+        description: `${item.title} hakkında detaylı bilgi, modellerimiz ve fiyat teklifi için Sivas Mermer'i ziyaret edin. ${item.description}`,
         openGraph: {
-            title: `${product.title} - Sivas Mermer`,
-            description: product.description,
-            images: [product.image],
+            title: `${item.title} - Sivas Mermer`,
+            description: item.description,
+            images: [item.image],
         },
     };
 }
 
-export default async function ProductPage({ params }: Props) {
+export default async function Page({ params }: Props) {
     const { slug } = await params;
-    const product = products.find((p) => p.id === slug);
+    const item = allItems.find((p) => p.id === slug);
 
-    if (!product) {
+    if (!item) {
         notFound();
     }
 
     return (
-        <div className="min-h-screen bg-[var(--cream)] pt-12 pb-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-[var(--cream)] pt-24 pb-12">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Breadcrumb-ish info or just Back link */}
+                <div className="mb-8">
+                    <Link
+                        href="/urunler"
+                        className="text-sm font-medium text-[var(--gold)] hover:text-[var(--gold-light)] flex items-center"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={2}
+                            stroke="currentColor"
+                            className="w-4 h-4 mr-1"
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                        </svg>
+                        Ana Sayfaya Dön
+                    </Link>
+                </div>
 
-                {/* Breadcrumb */}
-                <nav className="flex mb-8 text-sm text-[var(--grey-medium)]">
-                    <Link href="/" className="hover:text-[var(--gold)] transition-colors">Anasayfa</Link>
-                    <span className="mx-2">/</span>
-                    <span className="text-[var(--charcoal)] font-semibold">{product.title}</span>
-                </nav>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-
-                    {/* Image Section */}
-                    <div className="relative aspect-square md:aspect-[4/3] w-full bg-[var(--cream-dark)] rounded-lg overflow-hidden shadow-lg">
-                        {!product.image.startsWith("/images/") ? (
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div className="relative aspect-video w-full bg-[var(--cream-dark)]">
+                        {!item.image.startsWith("/images/") ? (
                             <Image
-                                src={product.image}
-                                alt={product.title}
+                                src={item.image}
+                                alt={item.title}
                                 fill
                                 className="object-cover"
                                 priority
@@ -73,28 +86,29 @@ export default async function ProductPage({ params }: Props) {
                         )}
                     </div>
 
-                    {/* Content Section */}
-                    <div className="flex flex-col justify-center">
-                        <h1 className="text-4xl md:text-5xl font-bold text-[var(--charcoal)] mb-6">
-                            {product.title}
+                    <div className="p-8 md:p-12">
+                        <h1 className="text-3xl md:text-4xl font-bold text-[var(--charcoal)] mb-6">
+                            {item.title}
                         </h1>
-                        <div className="w-20 h-1 bg-[var(--gold)] mb-8"></div>
                         <p className="text-lg text-[var(--grey-medium)] leading-relaxed mb-8">
-                            {product.description}
+                            {item.description}
                         </p>
 
-                        <div className="bg-white p-6 rounded-lg shadow-sm border border-[var(--cream-dark)]">
-                            <h3 className="text-lg font-semibold text-[var(--charcoal)] mb-2">Bilgi Alın</h3>
-                            <p className="text-[var(--grey-medium)] mb-4">Bu ürün hakkında detaylı bilgi ve fiyat teklifi almak için bizimle iletişime geçin.</p>
+                        <div className="bg-[var(--cream)] p-6 rounded-lg border border-[var(--cream-dark)]">
+                            <h3 className="text-xl font-semibold text-[var(--charcoal)] mb-3">
+                                Bilgi ve Sipariş
+                            </h3>
+                            <p className="text-[var(--grey-medium)] mb-4">
+                                {item.title} modellerimiz, stok durumu ve özel siparişleriniz için bizimle iletişime geçebilirsiniz.
+                            </p>
                             <Link
                                 href="/iletisim"
-                                className="inline-block w-full text-center px-8 py-4 bg-[var(--charcoal)] text-white font-medium hover:bg-[var(--gold)] transition-colors duration-300 rounded"
+                                className="inline-block px-8 py-3 bg-[var(--gold)] text-white font-medium hover:bg-[var(--gold-light)] transition-colors rounded-md"
                             >
-                                İletişime Geç
+                                WhatsApp İle Sor
                             </Link>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
