@@ -36,19 +36,21 @@ export default function Home() {
                 className="group cursor-pointer"
               >
                 {/* Ürün Kutusu */}
-                <div className="aspect-[3/4] bg-[var(--cream-dark)] mb-4 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-500">
-                  {!product.image.startsWith("/images/") ? (
-                    <Image
-                      src={product.image}
-                      alt={product.title}
-                      fill
-                      style={{ objectPosition: "center 12%" }}
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-[var(--grey-light)]/20 to-[var(--grey-medium)]/30 group-hover:scale-105 transition-transform duration-500" />
-                  )}
-                </div>
+                <Link href={`/${product.id}`} className="block">
+                  <div className="aspect-[3/4] bg-[var(--cream-dark)] mb-4 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-500">
+                    {!product.image.startsWith("/images/") ? (
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        fill
+                        style={{ objectPosition: "center 12%" }}
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-[var(--grey-light)]/20 to-[var(--grey-medium)]/30 group-hover:scale-105 transition-transform duration-500" />
+                    )}
+                  </div>
+                </Link>
                 <h3 className="text-xl font-semibold text-[var(--charcoal)] mb-2 group-hover:text-[var(--gold)] transition-colors">
                   {product.title}
                 </h3>

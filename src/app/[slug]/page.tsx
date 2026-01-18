@@ -101,12 +101,16 @@ export default async function Page({ params }: Props) {
                             <p className="text-[var(--grey-medium)] mb-4">
                                 {item.title} modellerimiz, stok durumu ve özel siparişleriniz için bizimle iletişime geçebilirsiniz.
                             </p>
-                            <Link
-                                href="/iletisim"
+                            <a
+                                href={`https://wa.me/905426328181?text=${encodeURIComponent(
+                                    `Merhaba, ${item.title} ürünü hakkında bilgi almak istiyorum.`
+                                )}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-block px-8 py-3 bg-[var(--gold)] text-white font-medium hover:bg-[var(--gold-light)] transition-colors rounded-md"
                             >
                                 WhatsApp İle Sor
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
