@@ -106,6 +106,27 @@ export default function RootLayout({
         <Navbar />
         <main className="pt-20">{children}</main>
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Sivas Mermer",
+              "image": "https://sivasmermer.com/logo.jpeg",
+              "description": "Sivas'ta kaliteli mermer üretimi ve satışı.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Sivas Merkez",
+                "addressLocality": "Sivas",
+                "addressCountry": "TR"
+              },
+              "url": "https://sivasmermer.com",
+              "telephone": "+90 555 555 55 55", // Placeholder, user can update
+              "priceRange": "₺₺"
+            })
+          }}
+        />
       </body>
     </html>
   );
