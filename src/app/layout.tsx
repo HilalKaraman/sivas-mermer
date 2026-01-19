@@ -51,18 +51,18 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/icons/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
         alt: "Sivas Mermer Logo",
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Sivas Mermer",
     description: "Sivas'ta kaliteli mermer ve granit çözümleri.",
-    images: ["/icons/android-chrome-512x512.png"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
