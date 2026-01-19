@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://sivasmermer.com.tr/sitemap.xml',
+        sitemap: 'https://sivasmermer.com/sitemap.xml',
     };
 }

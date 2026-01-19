@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sivasmermer.com.tr"), // Replace with actual domain
+  metadataBase: new URL("https://sivasmermer.com"), // Replace with actual domain
   title: {
     default: "Sivas Mermer | Mermer, Doğal Taş, Granit ve Mezar Taşı",
     template: "%s | Sivas Mermer",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Sivas Mermer | Kaliteli Mermer ve Granit İşçiliği",
     description:
       "Sivas'ta mermer ve granit ihtiyaçlarınız için güvenilir adres. Mezar taşı, mutfak tezgahı ve özel tasarım mermer işleri.",
-    url: "https://sivasmermer.com.tr",
+    url: "https://sivasmermer.com",
     siteName: "Sivas Mermer",
     locale: "tr_TR",
     type: "website",
@@ -113,7 +113,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Sivas Mermer",
-              "image": "https://sivasmermer.com.tr/logo.jpeg",
+              "image": "https://sivasmermer.com/logo.jpeg",
               "description": "Sivas'ta kaliteli mermer, granit ve doğal taş çözümleri.",
               "telephone": "+903462114827",
               "address": {
@@ -124,7 +124,7 @@ export default function RootLayout({
                 "postalCode": "58000",
                 "addressCountry": "TR"
               },
-              "url": "https://sivasmermer.com.tr",
+              "url": "https://sivasmermer.com",
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": [

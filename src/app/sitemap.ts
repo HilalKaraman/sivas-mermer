@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { products } from "../data/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://sivasmermer.com.tr";
+    const baseUrl = "https://sivasmermer.com";
 
     // Only generate URLs for products
     const allItems = [...products];
