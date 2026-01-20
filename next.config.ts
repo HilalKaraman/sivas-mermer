@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
         destination: '/hakkimizda', // Yeni sitendeki doğru adres
         permanent: true,
       },
+      {
+        source: '/urun-1-0-tum_urunlerimiz.html',
+        destination: '/urunler', // Yeni sitendeki doğru adres
+        permanent: true,
+      },
     ];
   },
 };
