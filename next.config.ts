@@ -9,6 +9,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/iletisim.html',
+        destination: '/iletisim', // Yeni sitendeki doğru adres
+        permanent: true,
+      },
+      {
+        source: '/sayfalar-1-hakkimizda.html',
+        destination: '/hakkimizda', // Yeni sitendeki doğru adres
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
