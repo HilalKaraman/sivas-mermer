@@ -65,6 +65,9 @@ export default function Footer() {
                 {/* Alt Çizgi */}
                 <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
                     <p>&copy; {new Date().getFullYear()} Sivas Mermer. Tüm hakları saklıdır.</p>
+                    <p className="mt-2 text-[15px] font-light text-gray-600">
+                        Designed by <a href="https://www.hexstudio.com.tr/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">Hex Studio</a>
+                    </p>
                 </div>
             </div>
         </footer>
