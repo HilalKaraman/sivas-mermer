@@ -10,13 +10,13 @@ export const categories: Product[] = [
         id: "koleksiyonlar/mezar-tasi",
         title: "Mermer Mezar",
         description: "Kaliteli mermer ve granitten, uzun ömürlü ve estetik mezar taşı modelleri.",
-        image: "/mezar_sedat.png",
+        image: "/mezar-urun1.png",
     },
     {
-        id: "koleksiyonlar/mermer-bastasi",
+        id: "koleksiyonlar/mermer-bas-tasi",
         title: "Mermer Baş Taşı",
         description: "Estetik ve dayanaklı, özel tasarım mermer baş taşları.",
-        image: "/mermer-bas-tasi.png",
+        image: "/bas-tasi-urun1.png",
     },
     {
         id: "koleksiyonlar/anit",
