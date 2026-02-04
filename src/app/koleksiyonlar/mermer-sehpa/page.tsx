@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 
 export const metadata: Metadata = {
-    title: "Mermer Çeşme Modelleri | Sivas Mermer - Hayrat ve Bahçe Çeşmeleri",
+    title: "Mermer Sehpa Modelleri | Sivas Mermer",
     description:
-        "Geleneksel ve modern tasarımlarla özel üretim mermer çeşme modelleri. Hayrat çeşmesi, bahçe çeşmesi ve anıt çeşme fiyatları için tıklayın.",
+        "Doğal mermer dokusuyla modern ve şık sehpa tasarımları. Özel üretim mermer sehpa modelleri.",
 };
 
-export default function CesmePage() {
+export default function MermerSehpaPage() {
     return (
         <div className="min-h-screen bg-[var(--cream)]">
             {/* Modern Header & Product Collection */}
@@ -22,79 +22,43 @@ export default function CesmePage() {
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[var(--charcoal)] mb-4">Uygulama Detayları</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[var(--charcoal)] mb-4">Mermer Sehpa Modelleri</h2>
                         <div className="w-24 h-1 bg-[var(--gold)] mx-auto rounded-full"></div>
                         <p className="mt-4 text-[var(--grey-medium)] max-w-2xl mx-auto">
-                            İnce işçilik ve detaylara gösterdiğimiz özen, projelerimizi farklı kılan en önemli unsurdur.
+                            Doğal mermer dokusuyla modern ve şık sehpa tasarımları ile mekanlarınıza zarafet katın.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "Klasik Hayrat Çeşmesi",
-                                image: "/cesme.png",
-                                desc: "Osmanlı motifleriyle bezenmiş, geleneksel tek kurnalı tasarım.",
+                                title: "Mermer Sehpa",
+                                image: "/sehpa-urun1.png",
+                                desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
-                                title: "Modern Bahçe Çeşmesi",
-                                image: "/cesme_modern_1.png",
-                                desc: "Minimalist hatlara sahip, doğal taş dokulu ve şelale akışlı modern tasarım.",
+                                title: "Mermer Sehpa",
+                                image: "/sehpa-urun2.png",
+                                desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
-                                title: "Anıt Meydan Çeşmesi",
-                                image: "/cesme_osmanli_1.png",
-                                desc: "Altın işlemeli detaylar ve geniş mermer aynasıyla heybetli meydan çeşmesi.",
+                                title: "Mermer Sehpa",
+                                image: "/sehpa-urun3.png",
+                                desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
-                                title: "Duvar Çeşmesi",
-                                image: "/cesme-detay9.png",
-                                desc: "Duvara monte edilebilen, yer kaplamayan zarif tasarım.",
+                                title: "Mermer Sehpa",
+                                image: "/sehpa-urun4.png",
+                                desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
-                                title: "Mermer Kurnalar",
-                                image: "/cesme-detay8.png",
-                                desc: "Hamam ve banyolar için el işçiliği detaylı mermer kurnalar.",
-                                price: "Fiyat Teklifi Al"
-                            },
-                            {
-                                title: "Mermer Çeşme Modeli",
-                                image: "/cesme-detay3.png",
-                                desc: "Zarif detaylarıyla bahçenize estetik katacak mermer çeşme.",
-                                price: "Fiyat Teklifi Al"
-                            },
-                            {
-                                title: "Özel Tasarım Çeşme",
-                                image: "/cesme-detay4.png",
-                                desc: "İsteklerinize özel olarak tasarlanan ve üretilen benzersiz çeşme modeli.",
-                                price: "Fiyat Teklifi Al"
-                            },
-                            {
-                                title: "Klasik Çeşme",
-                                image: "/cesme-detay5.png",
-                                desc: "Geleneksel çizgileri modern işçilikle buluşturan klasik çeşme.",
-                                price: "Fiyat Teklifi Al"
-                            },
-                            {
-                                title: "Bahçe Çeşmesi",
-                                image: "/cesme-detay6.png",
-                                desc: "Doğal taşın zarafetini bahçenize taşıyan şık çeşme tasarımı.",
-                                price: "Fiyat Teklifi Al"
-                            },
-                            {
-                                title: "Meydan Çeşmesi",
-                                image: "/cesme-detay7.png",
-                                desc: "Meydan ve parklar için heybetli ve estetik mermer çeşme.",
-                                price: "Fiyat Teklifi Al"
-                            },
-                            {
-                                title: "Mermer Çeşme",
-                                image: "/cesme-detay10.png",
-                                desc: "El işçiliği detaylarıyla öne çıkan zarif mermer çeşme modeli.",
+                                title: "Mermer Sehpa",
+                                image: "/sehpa-urun5.png",
+                                desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                         ].map((item, index) => (

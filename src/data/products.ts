@@ -43,6 +43,12 @@ export const categories: Product[] = [
         image: "/somine.png",
     },
     {
+        id: "koleksiyonlar/mermer-sehpa",
+        title: "Mermer Sehpa",
+        description: "Doğal mermer dokusuyla modern ve şık sehpa tasarımları.",
+        image: "/sehpa-urun5.png",
+    },
+    {
         id: "koleksiyonlar/merdiven",
         title: "Merdiven",
         description: "Mermer ve granit merdiven basamaklarıyla mekanlarınıza şıklık katın.",
