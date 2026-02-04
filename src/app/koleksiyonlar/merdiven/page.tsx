@@ -49,7 +49,66 @@ export default function MerdivenPage() {
                                 desc: "Projenize özel ölçü ve tasarımda merdiven basamakları.",
                                 price: "Fiyat Teklifi Al"
                             },
-
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun4.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun5.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun6.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun7.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun8.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun9.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun10.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun11.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun12.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
+                            {
+                                title: "Mermer Merdiven",
+                                image: "/merdiven-urun13.png",
+                                desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
+                                price: "Fiyat Teklifi Al"
+                            },
                         ].map((item, index) => (
                             <div key={index} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-[var(--border-light)] transform hover:-translate-y-2 flex flex-col">
                                 <div className="relative aspect-[3/4] overflow-hidden bg-[var(--cream-dark)]">
