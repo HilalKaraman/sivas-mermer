@@ -18,7 +18,7 @@ export default function Home() {
       <HeroSlider />
 
       {/* Ürün Kategorileri */}
-      <section className="py-24 bg-[var(--cream)]">
+      <section id="calismalarimiz" className="py-24 bg-[var(--cream)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sm uppercase tracking-[0.3em] text-[var(--grey-medium)] mb-4">

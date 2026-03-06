@@ -32,48 +32,56 @@ export default function TezgahPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
+                                code: "T001",
                                 title: "Özel Tasarım Mutfak Tezgahı",
                                 image: "/tezgah-urun1.png",
                                 desc: "Kişiye özel ölçü ve tasarım seçenekleriyle modern mutfak tezgahları.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
+                                code: "T002",
                                 title: "Granit Tezgah",
                                 image: "/tezgah.png",
                                 desc: "Doğal taşın dayanıklılığı ve şıklığını mutfağınıza taşıyan granit tezgahlar.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
+                                code: "T003",
                                 title: "Tezgah Uygulaması",
                                 image: "/tezgah-urun2.png",
                                 desc: "Dayanıklı ve şık mutfak tezgahı uygulaması.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
+                                code: "T004",
                                 title: "Mutfak Tezgahı Modeli",
                                 image: "/tezgah-urun3.png",
                                 desc: "Modern çizgiler ve kaliteli işçilikle üretilen mutfak tezgahı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
+                                code: "T005",
                                 title: "Mutfak Tezgahı",
                                 image: "/tezgah-urun4.png",
                                 desc: "Doğal granitin eşsiz renkleriyle mutfağınıza değer katın.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
+                                code: "T006",
                                 title: "Mutfak Tezgahı",
                                 image: "/tezgah-urun5.png",
                                 desc: "Mutfaklar için suya dayanıklı ve estetik  tezgah çözümleri.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
+                                code: "T007",
                                 title: "Özel Kesim Tezgah",
                                 image: "/tezgah-urun6.png",
                                 desc: "Projenize uygun özel ölçülerde kesilmiş mermer ve granit tezgahlar.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
+                                code: "T008",
                                 title: "Banyo Tezgahı",
                                 image: "/tezgah-urun7.png",
                                 desc: "Estetik görünümü ile banyolarınızın havasını değiştirecek tezgah modeli.",
@@ -90,15 +98,24 @@ export default function TezgahPage() {
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
-                                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[var(--charcoal)] shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+
+                                    {/* Product Code Badge */}
+                                    <div className="absolute top-4 left-4 bg-[var(--charcoal)]/90 backdrop-blur-md px-3 py-1.5 rounded-md text-xs font-bold text-[var(--gold)] shadow-lg border border-[var(--gold)]/30 z-10 flex items-center gap-1.5 transform -translate-y-1 opacity-90 group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M12 12v9" /><path d="m8 17 4 4 4-4" /></svg>
+                                        <span>{item.code}</span>
+                                    </div>
+
+                                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[var(--charcoal)] shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                                         İncele
                                     </div>
                                 </div>
 
                                 <div className="p-8 flex flex-col flex-grow">
-                                    <h3 className="text-2xl font-serif font-bold text-[var(--charcoal)] mb-3 group-hover:text-[var(--gold)] transition-colors">
-                                        {item.title}
-                                    </h3>
+                                    <div className="flex justify-between items-start mb-3">
+                                        <h3 className="text-2xl font-serif font-bold text-[var(--charcoal)] group-hover:text-[var(--gold)] transition-colors">
+                                            {item.title}
+                                        </h3>
+                                    </div>
                                     <p className="text-[var(--grey-medium)] text-sm leading-relaxed mb-6 line-clamp-2 flex-grow">
                                         {item.desc}
                                     </p>

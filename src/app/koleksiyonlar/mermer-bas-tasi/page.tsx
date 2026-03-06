@@ -30,12 +30,14 @@ export default function MermerBasTasiPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
+                                code: "B001",
                                 title: 'Traverten Baş Taşı',
                                 image: '/bas-tasi-urun1.png',
                                 desc: 'Özel tasarım mermer baş taşı.',
                                 price: 'Fiyat Teklifi Al',
                             },
                             {
+                                code: "B002",
                                 title: 'Mermer Baş Taşı',
                                 image: '/bas-tasi-urun2.png',
                                 desc: 'Estetik ve dayanıklı traverten baş taşı modeli.',
@@ -54,15 +56,24 @@ export default function MermerBasTasiPage() {
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
-                                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[var(--charcoal)] shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+
+                                    {/* Product Code Badge */}
+                                    <div className="absolute top-4 left-4 bg-[var(--charcoal)]/90 backdrop-blur-md px-3 py-1.5 rounded-md text-xs font-bold text-[var(--gold)] shadow-lg border border-[var(--gold)]/30 z-10 flex items-center gap-1.5 transform -translate-y-1 opacity-90 group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M12 12v9" /><path d="m8 17 4 4 4-4" /></svg>
+                                        <span>{item.code}</span>
+                                    </div>
+
+                                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[var(--charcoal)] shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                                         İncele
                                     </div>
                                 </div>
 
                                 <div className="p-8 flex flex-col flex-grow">
-                                    <h3 className="text-2xl font-serif font-bold text-[var(--charcoal)] mb-3 group-hover:text-[var(--gold)] transition-colors">
-                                        {item.title}
-                                    </h3>
+                                    <div className="flex justify-between items-start mb-3">
+                                        <h3 className="text-2xl font-serif font-bold text-[var(--charcoal)] group-hover:text-[var(--gold)] transition-colors">
+                                            {item.title}
+                                        </h3>
+                                    </div>
                                     <p className="text-[var(--grey-medium)] text-sm leading-relaxed mb-6 line-clamp-2 flex-grow">
                                         {item.desc}
                                     </p>
