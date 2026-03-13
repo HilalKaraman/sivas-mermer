@@ -18,18 +18,18 @@ export default function Home() {
       <HeroSlider />
 
       {/* Ürün Kategorileri */}
-      <section id="calismalarimiz" className="py-24 bg-[var(--cream)]">
+      <section id="calismalarimiz" className="py-12 sm:py-16 md:py-24 bg-[var(--cream)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm uppercase tracking-[0.3em] text-[var(--grey-medium)] mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[var(--grey-medium)] mb-2 sm:mb-4">
               Koleksiyonumuz
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--charcoal)] tracking-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[var(--charcoal)] tracking-tight">
               Çalışmalarımız
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {categories.map((product) => (
               <div
                 key={product.id}
@@ -37,7 +37,7 @@ export default function Home() {
               >
                 {/* Ürün Kutusu */}
                 <Link href={`/${product.id}`} className="block">
-                  <div className="aspect-[3/4] bg-[var(--cream-dark)] mb-4 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-500">
+                  <div className="aspect-square sm:aspect-[3/4] bg-[var(--cream-dark)] mb-2 sm:mb-4 overflow-hidden relative shadow-md group-hover:shadow-xl transition-all duration-500">
                     {!product.image.startsWith("/images/") ? (
                       <Image
                         src={product.image}

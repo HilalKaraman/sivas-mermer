@@ -30,7 +30,7 @@ export default function HeroSlider() {
     ];
 
     return (
-        <div className="relative w-full h-[35vh] sm:h-[50vh] md:h-[calc(100vh-80px)] min-h-[250px] md:min-h-[600px] bg-neutral-900">
+        <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[calc(100vh-80px)] min-h-[280px] md:min-h-[600px] bg-neutral-900">
             <Swiper
                 modules={[Autoplay, Pagination, EffectFade, Navigation, Keyboard]}
                 keyboard={{
