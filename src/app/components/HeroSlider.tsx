@@ -15,32 +15,22 @@ export default function HeroSlider() {
     const slides = [
         {
             id: 1,
-            image: '/slider-new-1.png',
-            mobileImage: '/slider-phone-1.png',
+            image: '/yeni-slider-1.jpeg',
             title: 'Öz Sivas Mermer',
-            subtitle: 'Doğanın sanatını mekanlarınıza taşıyoruz. ',
-            path: 'Anasayfa'
+            subtitle: 'Özel projeleriniz için sanatsal dokunuşlar.',
+            path: 'Projelerimiz'
         },
         {
             id: 2,
-            image: '/slider-2.png',
-            mobileImage: '/slider-phone-2.png',
+            image: '/yeni-slider-2.jpeg',
             title: 'Öz Sivas Mermer',
             subtitle: 'Doğanın sanatını mekanlarınıza taşıyoruz.',
             path: 'Anasayfa '
-        },
-        {
-            id: 3,
-            image: '/slider-new-3.png',
-            mobileImage: '/slider-phone-3.png',
-            title: 'Öz Sivas Mermer',
-            subtitle: 'Doğanın sanatını mekanlarınıza taşıyoruz.',
-            path: 'Anasayfa'
         }
     ];
 
     return (
-        <div className="relative w-full h-[100vh] md:h-[calc(100vh-80px)] min-h-[600px] bg-neutral-900">
+        <div className="relative w-full h-[35vh] sm:h-[50vh] md:h-[calc(100vh-80px)] min-h-[250px] md:min-h-[600px] bg-neutral-900">
             <Swiper
                 modules={[Autoplay, Pagination, EffectFade, Navigation, Keyboard]}
                 keyboard={{
@@ -66,58 +56,40 @@ export default function HeroSlider() {
                     <SwiperSlide key={slide.id} className="relative w-full h-full">
                         {/* Arkaplan Görseli */}
                         <div className="relative w-full h-full">
-                            {/* Desktop Image */}
-                            <div className={`relative w-full h-full ${slide.mobileImage ? 'hidden md:block' : ''}`}>
-                                <Image
-                                    src={slide.image}
-                                    alt={slide.subtitle}
-                                    fill
-                                    priority={slide.id === 1}
-                                    className="object-cover"
-                                    quality={90}
-                                />
-                            </div>
-
-                            {/* Mobile Image (If exists) */}
-                            {slide.mobileImage && (
-                                <div className="relative w-full h-full md:hidden">
-                                    <Image
-                                        src={slide.mobileImage}
-                                        alt={slide.subtitle}
-                                        fill
-                                        priority={slide.id === 1}
-                                        className="object-cover"
-                                        quality={90}
-                                    />
-                                </div>
-                            )}
+                            <Image
+                                src={slide.image}
+                                alt={slide.subtitle}
+                                fill
+                                priority={slide.id === 1}
+                                className="object-cover object-center"
+                                quality={90}
+                            />
 
                             {/* Karartma Katmanı */}
-                            <div className="absolute inset-0 bg-black/20" />
+                            <div className="absolute inset-0 bg-black/15" />
                         </div>
 
                         {/* İçerik Katmanı */}
                         <div className="absolute inset-0 z-10 container mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="flex flex-col justify-between h-full pt-20 pb-12 sm:py-32">
 
-                                {/* Sol Üst Başlık (Sabit gibi görünen) */}
-                                {/* Sol Üst Başlık (Sabit gibi görünen) */}
+                                {/* Sol Üst Başlık */}
                                 <div className="max-w-4xl">
-                                    <span className="text-white/80 text-sm md:text-base tracking-[0.2em] uppercase mb-4 block animate-subtitle">
+                                    <span className="text-white/90 text-xs md:text-base tracking-[0.2em] uppercase mb-2 md:mb-4 block animate-subtitle" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
                                         {slide.path}
                                     </span>
-                                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/80 tracking-tight leading-[0.9] drop-shadow-2xl animate-blur-in-up">
+                                    <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/80 tracking-tight leading-[0.9] drop-shadow-2xl animate-blur-in-up">
                                         {slide.title}
                                     </h1>
                                 </div>
 
-                                {/* Sağ Alt Ürün İsmi */}
+                                {/* Sağ Alt Alt Yazı */}
                                 <div className="self-end max-w-md w-full animate-fade-in-up">
-                                    <div className="bg-black/60 backdrop-blur-sm p-6 sm:p-8 border-l-4 border-white/80">
-                                        <h2 className="text-lg sm:text-3xl font-light text-white tracking-wide uppercase animate-subtitle">
+                                    <div className="bg-black/10 md:bg-black/40 px-4 py-3 sm:p-6 md:p-8 border-l-2 md:border-l-4 border-white/70 rounded-sm">
+                                        <h2 className="text-sm sm:text-xl md:text-3xl font-light text-gray-200 tracking-wide uppercase animate-subtitle" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
                                             {slide.subtitle}
                                         </h2>
-                                        <div className="w-12 h-1 bg-white mt-4 opacity-80" />
+                                        <div className="w-8 md:w-12 h-0.5 md:h-1 bg-white mt-2 md:mt-4 opacity-80" />
                                     </div>
                                 </div>
 
