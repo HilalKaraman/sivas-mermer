@@ -51,9 +51,11 @@ export default function Home() {
                     )}
                   </div>
                 </Link>
-                <h3 className="text-xl font-semibold text-[var(--charcoal)] mb-2 group-hover:text-[var(--gold)] transition-colors">
-                  {product.title}
-                </h3>
+                <Link href={`/${product.id}`}>
+                  <h3 className="text-xl font-semibold text-[var(--charcoal)] mb-2 group-hover:text-[var(--gold)] transition-colors cursor-pointer">
+                    {product.title}
+                  </h3>
+                </Link>
                 <p className="text-sm text-[var(--grey-medium)] leading-relaxed mb-4">
                   {product.description}
                 </p>
