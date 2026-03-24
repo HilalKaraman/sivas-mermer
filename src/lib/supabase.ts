@@ -1,25 +1,28 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl  = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl  = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
+const supabaseAnon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
 
-export const supabase = createClient(supabaseUrl, supabaseAnon);
+// Client sadece supabaseUrl varsa oluşturulur (build sırasında crash etmez)
+export const supabase = supabaseUrl
+  ? createClient(supabaseUrl, supabaseAnon)
+  : null;
 
 export const BUCKET = "urunler";
-const BASE = `${supabaseUrl}/storage/v1/object/public/${BUCKET}`;
+
+// Proje URL'i hardcode — env var olmasa bile img() fonksiyonu çalışır
+const BASE = "https://mabxkodvuedapdowrryf.supabase.co/storage/v1/object/public/urunler";
 
 /**
  * Yerel path'i (/foo.png) Supabase CDN URL'ine çevirir.
  * PNG dosyaları otomatik .jpg'ye dönüştürülür.
- * Örn: img("/hamam-urun1.png") → "https://....supabase.co/.../hamam-urun1.jpg"
  */
 export function img(localPath: string): string {
-  // "/foo.png" → "foo.jpg", "/bar.jpeg" → "bar.jpeg"
   const filename = localPath.replace(/^\//, "").replace(/\.png$/i, ".jpg");
   return `${BASE}/${filename}`;
 }
 
-/** Dosya adı zaten bilgisayarınızdaki Supabase adıysa kullanın */
+/** Dosya adını Supabase URL'ine çevirir */
 export function getImageUrl(fileName: string): string {
   return `${BASE}/${fileName}`;
 }
