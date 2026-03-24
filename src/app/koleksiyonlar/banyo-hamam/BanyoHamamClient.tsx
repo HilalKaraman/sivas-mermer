@@ -19,6 +19,8 @@ export default function BanyoHamamClient() {
         price: "Fiyat Teklifi Al"
     }));
 
+
+
     const totalPages = Math.ceil(products.length / itemsPerPage);
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -100,14 +102,13 @@ export default function BanyoHamamClient() {
                         <button
                             onClick={() => handlePageChange(currentPage - 1)}
                             disabled={currentPage === 1}
-                            className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${
-                                currentPage === 1 
-                                ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed' 
-                                : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
-                            }`}
+                            className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${currentPage === 1
+                                    ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed'
+                                    : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
+                                }`}
                             aria-label="Previous page"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
                         </button>
 
                         <div className="flex gap-2">
@@ -115,11 +116,10 @@ export default function BanyoHamamClient() {
                                 <button
                                     key={i + 1}
                                     onClick={() => handlePageChange(i + 1)}
-                                    className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm transition-all duration-300 ${
-                                        currentPage === i + 1 
-                                        ? 'bg-[var(--gold)] text-white shadow-lg transform -translate-y-1' 
-                                        : 'bg-white text-[var(--charcoal)] border border-[var(--border-light)] hover:border-[var(--gold)] hover:text-[var(--gold)] shadow-sm hover:shadow-md transform hover:-translate-y-1'
-                                    }`}
+                                    className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm transition-all duration-300 ${currentPage === i + 1
+                                            ? 'bg-[var(--gold)] text-white shadow-lg transform -translate-y-1'
+                                            : 'bg-white text-[var(--charcoal)] border border-[var(--border-light)] hover:border-[var(--gold)] hover:text-[var(--gold)] shadow-sm hover:shadow-md transform hover:-translate-y-1'
+                                        }`}
                                 >
                                     {i + 1}
                                 </button>
@@ -129,14 +129,13 @@ export default function BanyoHamamClient() {
                         <button
                             onClick={() => handlePageChange(currentPage + 1)}
                             disabled={currentPage === totalPages}
-                            className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${
-                                currentPage === totalPages 
-                                ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed' 
-                                : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
-                            }`}
+                            className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${currentPage === totalPages
+                                    ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed'
+                                    : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
+                                }`}
                             aria-label="Next page"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
                         </button>
                     </div>
                 )}
@@ -148,7 +147,7 @@ export default function BanyoHamamClient() {
                     to { opacity: 1; transform: translateY(0); }
                 }
             `}</style>
-            
+
             <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[var(--cream)] to-transparent pointer-events-none"></div>
         </section>
     );
