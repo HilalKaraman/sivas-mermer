@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,56 +35,56 @@ export default function TezgahPage() {
                             {
                                 code: "T001",
                                 title: "Özel Tasarım Mutfak Tezgahı",
-                                image: "/tezgah-urun1.png",
+                                image: img("/tezgah-urun1.png"),
                                 desc: "Kişiye özel ölçü ve tasarım seçenekleriyle modern mutfak tezgahları.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "T002",
                                 title: "Granit Tezgah",
-                                image: "/tezgah.png",
+                                image: img("/tezgah.png"),
                                 desc: "Doğal taşın dayanıklılığı ve şıklığını mutfağınıza taşıyan granit tezgahlar.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "T003",
                                 title: "Tezgah Uygulaması",
-                                image: "/tezgah-urun2.png",
+                                image: img("/tezgah-urun2.png"),
                                 desc: "Dayanıklı ve şık mutfak tezgahı uygulaması.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "T004",
                                 title: "Mutfak Tezgahı Modeli",
-                                image: "/tezgah-urun3.png",
+                                image: img("/tezgah-urun3.png"),
                                 desc: "Modern çizgiler ve kaliteli işçilikle üretilen mutfak tezgahı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "T005",
                                 title: "Mutfak Tezgahı",
-                                image: "/tezgah-urun4.png",
+                                image: img("/tezgah-urun4.png"),
                                 desc: "Doğal granitin eşsiz renkleriyle mutfağınıza değer katın.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "T006",
                                 title: "Mutfak Tezgahı",
-                                image: "/tezgah-urun5.png",
+                                image: img("/tezgah-urun5.png"),
                                 desc: "Mutfaklar için suya dayanıklı ve estetik  tezgah çözümleri.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "T007",
                                 title: "Özel Kesim Tezgah",
-                                image: "/tezgah-urun6.png",
+                                image: img("/tezgah-urun6.png"),
                                 desc: "Projenize uygun özel ölçülerde kesilmiş mermer ve granit tezgahlar.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "T008",
                                 title: "Banyo Tezgahı",
-                                image: "/tezgah-urun7.png",
+                                image: img("/tezgah-urun7.png"),
                                 desc: "Estetik görünümü ile banyolarınızın havasını değiştirecek tezgah modeli.",
                                 price: "Fiyat Teklifi Al"
                             },

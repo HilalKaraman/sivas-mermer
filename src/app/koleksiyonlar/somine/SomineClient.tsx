@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from 'react';
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,49 +14,49 @@ export default function SomineClient() {
         {
             code: "S001",
             title: "Klasik Şömine",
-            image: "/somine-urun1.png",
+            image: img("/somine-urun1.png"),
             desc: "Geleneksel motiflerle bezenmiş, salonunuza asillik katan klasik şömine modeli.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S002",
             title: "Modern Şömine Tasarımı",
-            image: "/somine-urun2.png",
+            image: img("/somine-urun2.png"),
             desc: "Minimalist hatlar ve doğal taşın uyumuyla tasarlanan modern şömine.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S003",
             title: "Granit Şömine",
-            image: "/somine-urun3.png",
+            image: img("/somine-urun3.png"),
             desc: "Granitin dayanıklılığı ve şıklığını bir arada sunan özel tasarım.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S004",
             title: "Dekoratif Şömine",
-            image: "/somine-urun4.png",
+            image: img("/somine-urun4.png"),
             desc: "Mekanınıza sanatsal bir dokunuş katan dekoratif taş şömine.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S005",
             title: "Köşe Şömine Modeli",
-            image: "/somine-urun5.png",
+            image: img("/somine-urun5.png"),
             desc: "Mekan kullanımını optimize eden şık köşe şömine uygulaması.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S006",
             title: "Mermer Şömine",
-            image: "/somine-urun6.png",
+            image: img("/somine-urun6.png"),
             desc: "Mermerin eşsiz damar yapısıyla her biri sanat eseri niteliğinde şömineler.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S007",
             title: "Özel Tasarım Şömine",
-            image: "/somine-urun7.png",
+            image: img("/somine-urun7.png"),
             desc: "İsteklerinize ve mekanınıza özel olarak projelendirilen şömine çözümleri.",
             price: "Fiyat Teklifi Al"
         },

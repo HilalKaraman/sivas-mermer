@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,21 +35,21 @@ export default function MermerSupurgelikPage() {
                             {
                                 code: "G001",
                                 title: "Klasik Süpürgelik",
-                                image: "/supurgelik-urun1.png",
+                                image: img("/supurgelik-urun1.png"),
                                 desc: "Her mekana uyum sağlayan, sade ve şık mermer süpürgelik modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "G002",
                                 title: "Modern Süpürgelik",
-                                image: "/supurgelik-urun2.png",
+                                image: img("/supurgelik-urun2.png"),
                                 desc: "Modern çizgilerle tasarlanmış, dekoratif ve işlevsel süpürgelik uygulaması.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "G003",
                                 title: "Dekoratif Süpürgelik",
-                                image: "/supurgelik-urun3.png",
+                                image: img("/supurgelik-urun3.png"),
                                 desc: "Özel desen ve kesimlerle zenginleştirilmiş dekoratif mermer süpürgelik.",
                                 price: "Fiyat Teklifi Al"
                             },

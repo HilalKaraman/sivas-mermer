@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,21 +35,21 @@ export default function HarpustaPage() {
                             {
                                 code: "H001",
                                 title: "Modern Harpuşta",
-                                image: "/harpusta-urun1.png",
+                                image: img("/harpusta-urun1.png"),
                                 desc: "Modern mimariye uygun, sade ve şık harpuşta tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "H002",
                                 title: "Özel Kesim Harpuşta",
-                                image: "/harpusta-urun2.png",
+                                image: img("/harpusta-urun2.png"),
                                 desc: "Duvar ölçülerinize tam uyum sağlayan özel kesim harpuşta.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "H003",
                                 title: "Duvar Üstü Harpuşta",
-                                image: "/harpusta_modern.png",
+                                image: img("/harpusta_modern.png"),
                                 desc: "Yağmur ve kar sularını uzaklaştıran eğimli ve estetik harpuşta.",
                                 price: "Fiyat Teklifi Al"
                             },

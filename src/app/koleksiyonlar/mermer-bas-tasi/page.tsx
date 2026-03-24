@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { img } from '@/lib/supabase';
+
 
 export const metadata: Metadata = {
     title: 'Mermer Baş Taşı Modelleri | Sivas Mermer',
@@ -32,14 +34,16 @@ export default function MermerBasTasiPage() {
                             {
                                 code: "B001",
                                 title: 'Traverten Baş Taşı',
-                                image: '/bas-tasi-urun1.png',
+                                image: img('/bas-tasi-urun1.png'),
+
                                 desc: 'Özel tasarım mermer baş taşı.',
                                 price: 'Fiyat Teklifi Al',
                             },
                             {
                                 code: "B002",
                                 title: 'Mermer Baş Taşı',
-                                image: '/bas-tasi-urun2.png',
+                                image: img('/bas-tasi-urun2.png'),
+
                                 desc: 'Estetik ve dayanıklı traverten baş taşı modeli.',
                                 price: 'Fiyat Teklifi Al',
                             },

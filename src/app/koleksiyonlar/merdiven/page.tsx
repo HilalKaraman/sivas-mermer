@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,91 +35,91 @@ export default function MerdivenPage() {
                             {
                                 code: "R001",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun1.png",
+                                image: img("/merdiven-urun1.png"),
                                 desc: "Beyaz mermerden üretilmiş şık ve dayanıklı merdiven basamakları.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R002",
                                 title: "Marmara Merdiven",
-                                image: "/merdiven-urun2.png",
+                                image: img("/merdiven-urun2.png"),
                                 desc: "Doğal mermer sağlamlığıyla uzun ömürlü merdiven çözümleri.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R003",
                                 title: "Özel Tasarım Merdiven",
-                                image: "/merdiven-urun3.png",
+                                image: img("/merdiven-urun3.png"),
                                 desc: "Projenize özel ölçü ve tasarımda merdiven basamakları.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R004",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun4.png",
+                                image: img("/merdiven-urun4.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R005",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun5.png",
+                                image: img("/merdiven-urun5.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R006",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun6.png",
+                                image: img("/merdiven-urun6.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R007",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun7.png",
+                                image: img("/merdiven-urun7.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R008",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun8.png",
+                                image: img("/merdiven-urun8.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R009",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun9.png",
+                                image: img("/merdiven-urun9.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R010",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun10.png",
+                                image: img("/merdiven-urun10.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R011",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun11.png",
+                                image: img("/merdiven-urun11.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R012",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun12.png",
+                                image: img("/merdiven-urun12.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "R013",
                                 title: "Mermer Merdiven",
-                                image: "/merdiven-urun13.png",
+                                image: img("/merdiven-urun13.png"),
                                 desc: "Doğal mermer dokusuyla şık ve dayanıklı merdiven tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },

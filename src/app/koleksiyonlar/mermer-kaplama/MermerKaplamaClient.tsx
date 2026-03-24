@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from 'react';
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,56 +14,56 @@ export default function MermerKaplamaClient() {
         {
             code: "K001",
             title: "Duvar Kaplama",
-            image: "/kaplama-urun1.png",
+            image: img("/kaplama-urun1.png"),
             desc: "İç ve dış mekanlar için şık ve dayanıklı mermer duvar kaplama uygulamaları.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "K002",
             title: "Dış Cephe Kaplama",
-            image: "/kaplama-urun4.png",
+            image: img("/kaplama-urun4.png"),
             desc: "Yüksek trafikli alanlar için uzun ömürlü mermer zemin kaplama çözümleri.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "K003",
             title: "Özel Kaplama",
-            image: "/kaplama-urun5.png",
+            image: img("/kaplama-urun5.png"),
             desc: "Projenize özel ölçü ve tasarımlarla mermer kaplama uygulamaları.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "K004",
             title: "Traverten Kaplama",
-            image: "/traverten-kaplama1.png",
+            image: img("/traverten-kaplama1.png"),
             desc: "Doğal görünümüyle öne çıkan, estetik ve dayanıklı traverten kaplama çözümü.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "K005",
             title: "Traverten Kaplama",
-            image: "/traverten-kaplama2.png",
+            image: img("/traverten-kaplama2.png"),
             desc: "Doğal görünümüyle öne çıkan, estetik ve dayanıklı traverten kaplama çözümü.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "K006",
             title: "Traverten Kaplama",
-            image: "/traverten-kaplama3.png",
+            image: img("/traverten-kaplama3.png"),
             desc: "Doğal görünümüyle öne çıkan, estetik ve dayanıklı traverten kaplama çözümü.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "K007",
             title: "Traverten Kaplama",
-            image: "/traverten-kaplama4.png",
+            image: img("/traverten-kaplama4.png"),
             desc: "Doğal görünümüyle öne çıkan, estetik ve dayanıklı traverten kaplama çözümü.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "K008",
             title: "Traverten Kaplama",
-            image: "/traverten-kaplama5.png",
+            image: img("/traverten-kaplama5.png"),
             desc: "Doğal görünümüyle öne çıkan, estetik ve dayanıklı traverten kaplama çözümü.",
             price: "Fiyat Teklifi Al"
         },

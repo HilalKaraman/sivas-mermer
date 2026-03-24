@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,14 +35,14 @@ export default function AnitPage() {
                             {
                                 code: "A001",
                                 title: "Anıt",
-                                image: "/anit-urun1.png",
+                                image: img("/anit-urun1.png"),
                                 desc: "Özel tasarım anıt mezar projesi. Mermer ve granitten kaliteli işçilik.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "A002",
                                 title: "Şehitlik Anıtı",
-                                image: "/anit-urun2.png",
+                                image: img("/anit-urun2.png"),
                                 desc: "Şehitlerimizin anısını yaşatmak için tasarlanan özel anıt projesi.",
                                 price: "Fiyat Teklifi Al"
                             },

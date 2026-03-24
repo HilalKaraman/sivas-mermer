@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,21 +35,21 @@ export default function DenizlikPage() {
                             {
                                 code: "Z001",
                                 title: "Özel Kesim Denizlik",
-                                image: "/denizlik-urun1.png",
+                                image: img("/denizlik-urun1.png"),
                                 desc: "Pencere ölçülerinize tam uyumlu, özel kesim mermer denizlikler.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "Z002",
                                 title: "Mermer Pencere Önü",
-                                image: "/denizlik-urun2.png",
+                                image: img("/denizlik-urun2.png"),
                                 desc: "Su yalıtımı sağlayan ve estetik görünüm sunan pencere önü mermerleri.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "Z003",
                                 title: "Dekoratif Denizlik",
-                                image: "/denizlik-urun3.png",
+                                image: img("/denizlik-urun3.png"),
                                 desc: "Cephe tasarımınızı tamamlayan dekoratif detaylara sahip denizlik modelleri.",
                                 price: "Fiyat Teklifi Al"
                             },

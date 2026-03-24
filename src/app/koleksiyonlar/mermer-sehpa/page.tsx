@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,35 +35,35 @@ export default function MermerSehpaPage() {
                             {
                                 code: "E001",
                                 title: "Mermer Sehpa",
-                                image: "/sehpa-urun1.png",
+                                image: img("/sehpa-urun1.png"),
                                 desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "E002",
                                 title: "Mermer Sehpa",
-                                image: "/sehpa-urun2.png",
+                                image: img("/sehpa-urun2.png"),
                                 desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "E003",
                                 title: "Mermer Sehpa",
-                                image: "/sehpa-urun3.png",
+                                image: img("/sehpa-urun3.png"),
                                 desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "E004",
                                 title: "Mermer Sehpa",
-                                image: "/sehpa-urun4.png",
+                                image: img("/sehpa-urun4.png"),
                                 desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "E005",
                                 title: "Mermer Sehpa",
-                                image: "/sehpa-urun5.png",
+                                image: img("/sehpa-urun5.png"),
                                 desc: "Doğal mermer dokusuyla tasarlanmış şık ve modern sehpa modeli.",
                                 price: "Fiyat Teklifi Al"
                             },

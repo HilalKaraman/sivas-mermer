@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,77 +35,77 @@ export default function CesmePage() {
                             {
                                 code: "C001",
                                 title: "Klasik Hayrat Çeşmesi",
-                                image: "/cesme.png",
+                                image: img("/cesme.png"),
                                 desc: "Osmanlı motifleriyle bezenmiş, geleneksel tek kurnalı tasarım.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C002",
                                 title: "Modern Bahçe Çeşmesi",
-                                image: "/cesme_modern_1.png",
+                                image: img("/cesme_modern_1.png"),
                                 desc: "Minimalist hatlara sahip, doğal taş dokulu ve şelale akışlı modern tasarım.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C003",
                                 title: "Anıt Meydan Çeşmesi",
-                                image: "/cesme_osmanli_1.png",
+                                image: img("/cesme_osmanli_1.png"),
                                 desc: "Altın işlemeli detaylar ve geniş mermer aynasıyla heybetli meydan çeşmesi.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C004",
                                 title: "Duvar Çeşmesi",
-                                image: "/cesme-detay9.png",
+                                image: img("/cesme-detay9.png"),
                                 desc: "Duvara monte edilebilen, yer kaplamayan zarif tasarım.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C005",
                                 title: "Mermer Kurnalar",
-                                image: "/cesme-detay8.png",
+                                image: img("/cesme-detay8.png"),
                                 desc: "Hamam ve banyolar için el işçiliği detaylı mermer kurnalar.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C006",
                                 title: "Mermer Çeşme Modeli",
-                                image: "/cesme-detay3.png",
+                                image: img("/cesme-detay3.png"),
                                 desc: "Zarif detaylarıyla bahçenize estetik katacak mermer çeşme.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C007",
                                 title: "Özel Tasarım Çeşme",
-                                image: "/cesme-detay4.png",
+                                image: img("/cesme-detay4.png"),
                                 desc: "İsteklerinize özel olarak tasarlanan ve üretilen benzersiz çeşme modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C008",
                                 title: "Klasik Çeşme",
-                                image: "/cesme-detay5.png",
+                                image: img("/cesme-detay5.png"),
                                 desc: "Geleneksel çizgileri modern işçilikle buluşturan klasik çeşme.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C009",
                                 title: "Bahçe Çeşmesi",
-                                image: "/cesme-detay6.png",
+                                image: img("/cesme-detay6.png"),
                                 desc: "Doğal taşın zarafetini bahçenize taşıyan şık çeşme tasarımı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C010",
                                 title: "Meydan Çeşmesi",
-                                image: "/cesme-detay7.png",
+                                image: img("/cesme-detay7.png"),
                                 desc: "Meydan ve parklar için heybetli ve estetik mermer çeşme.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "C011",
                                 title: "Mermer Çeşme",
-                                image: "/cesme-detay10.png",
+                                image: img("/cesme-detay10.png"),
                                 desc: "El işçiliği detaylarıyla öne çıkan zarif mermer çeşme modeli.",
                                 price: "Fiyat Teklifi Al"
                             },

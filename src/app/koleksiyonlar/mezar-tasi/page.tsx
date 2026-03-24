@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -32,84 +33,84 @@ export default function MezarPage() {
                             {
                                 code: "M001",
                                 title: "Mermer Mezar",
-                                image: "/mezar-urun1.png",
+                                image: img("/mezar-urun1.png"),
                                 desc: "Sade ve şık tasarımıyla öne çıkan, beyaz mermer tek kişilik mezar modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M002",
                                 title: "Mermer Mezar",
-                                image: "/mezar-urun2.png",
+                                image: img("/mezar-urun2.png"),
                                 desc: "Sade ve şık tasarımıyla öne çıkan, beyaz mermer tek kişilik mezar modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M003",
                                 title: "Mermer Mezar",
-                                image: "/mezar-urun3.png",
+                                image: img("/mezar-urun3.png"),
                                 desc: "Siyahın asaletini yansıtan, uzun ömürlü ve gösterişli mezar.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M004",
                                 title: "Aile Mezarı",
-                                image: "/mezar-urun11.png",
+                                image: img("/mezar-urun11.png"),
                                 desc: "İsteklerinize göre şekillendirilen, taş sanatının inceliklerini taşıyan özel tasarım.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M005",
                                 title: "Mermer Blok Mezar",
-                                image: "/mezar-urun12.png",
+                                image: img("/mezar-urun12.png"),
                                 desc: "Kalın blok mermerden üretilmiş, sağlam ve heybetli mezar yapısı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M006",
                                 title: "Mermer Mezar",
-                                image: "/mezar-urun6.png",
+                                image: img("/mezar-urun6.png"),
                                 desc: "İsteklerinize göre şekillendirilen, taş sanatının inceliklerini taşıyan özel tasarım.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M007",
                                 title: "Aile Mezarı",
-                                image: "/mezar-urun13.png",
+                                image: img("/mezar-urun13.png"),
                                 desc: "Yan yana definler için uygun, estetik bütünlüğe sahip çift kişilik mezar.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M008",
                                 title: "Beyaz Mermer Mezar",
-                                image: "/mezar-urun14.png",
+                                image: img("/mezar-urun14.png"),
                                 desc: "Beyaz mermer kullanılarak yapılan, lekesiz ve pürüzsüz mezar.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M009",
                                 title: "Mermer Mezar",
-                                image: "/mezar-urun9.png",
+                                image: img("/mezar-urun9.png"),
                                 desc: "Modern malzemelerle güçlendirilmiş, yeni nesil mezar çözümü.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M010",
                                 title: "Klasik Traverten Mezar",
-                                image: "/mezar-urun10.png",
+                                image: img("/mezar-urun10.png"),
                                 desc: "Geleneksel baş taşı formuna sahip, klasik ve zamansız mezar modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M011",
                                 title: "Mermer Mezar",
-                                image: "/mezar-urun15.png",
+                                image: img("/mezar-urun15.png"),
                                 desc: "Estetik görünümü ile dikkat çeken özel mezar taşı modeli.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "M012",
                                 title: "Mermer Mezar",
-                                image: "/mezar-urun16.png",
+                                image: img("/mezar-urun16.png"),
                                 desc: "Dayanıklı yapısı ve şık tasarımıyla öne çıkan mermer mezar.",
                                 price: "Fiyat Teklifi Al"
                             },

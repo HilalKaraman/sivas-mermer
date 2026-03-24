@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,21 +35,21 @@ export default function MermerBordurPage() {
                             {
                                 code: "U001",
                                 title: "Desenli Bordür",
-                                image: "/bordur-urun1.png",
+                                image: img("/bordur-urun1.png"),
                                 desc: "Klasik ve modern desenlerle işlenmiş dekoratif bordür.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "U002",
                                 title: "Zemin Bordür",
-                                image: "/bordur-urun3.png",
+                                image: img("/bordur-urun3.png"),
                                 desc: "Zemin kaplamalarınıza çerçeve oluşturan şık bordür uygulaması.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "U003",
                                 title: "Zemin Bordür",
-                                image: "/bordur-urun4.png",
+                                image: img("/bordur-urun4.png"),
                                 desc: "Zemin kaplamalarınıza çerçeve oluşturan şık bordür uygulaması.",
                                 price: "Fiyat Teklifi Al"
                             },

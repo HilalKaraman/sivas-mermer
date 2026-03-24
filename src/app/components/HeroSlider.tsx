@@ -4,6 +4,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade, Navigation, Keyboard } from 'swiper/modules';
 import Image from 'next/image';
+import { img } from '@/lib/supabase';
 
 // Swiper stillerini içe aktar
 import 'swiper/css';
@@ -15,19 +16,20 @@ export default function HeroSlider() {
     const slides = [
         {
             id: 1,
-            image: '/yeni-slider-1.jpeg',
+            image: img('/yeni-slider-1.jpeg'),
             title: 'Öz Sivas Mermer',
             subtitle: 'Özel projeleriniz için sanatsal dokunuşlar.',
             path: 'Projelerimiz'
         },
         {
             id: 2,
-            image: '/yeni-slider-2.jpeg',
+            image: img('/yeni-slider-2.jpeg'),
             title: 'Öz Sivas Mermer',
             subtitle: 'Doğanın sanatını mekanlarınıza taşıyoruz.',
             path: 'Anasayfa '
         }
     ];
+
 
     return (
         <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[calc(100vh-80px)] min-h-[280px] md:min-h-[600px] bg-neutral-900">

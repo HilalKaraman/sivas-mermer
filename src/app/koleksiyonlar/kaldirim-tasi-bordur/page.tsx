@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,14 +35,14 @@ export default function KaldirimTasiBordurPage() {
                             {
                                 code: "T001",
                                 title: "Klasik Kaldırım Taşı",
-                                image: "/kaldirim-bordur-urun1.png",
+                                image: img("/kaldirim-bordur-urun1.png"),
                                 desc: "Dayanıklı yapısı ve klasik görünümüyle her türlü dış mekana uygun kaldırım taşı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
                                 code: "T002",
                                 title: "Modern Kaldırım Bordür",
-                                image: "/kaldirim-bordur-urun2.png",
+                                image: img("/kaldirim-bordur-urun2.png"),
                                 desc: "Modern peyzaj tasarımlarını tamamlayan, net çizgilere sahip bordür.",
                                 price: "Fiyat Teklifi Al"
                             },
