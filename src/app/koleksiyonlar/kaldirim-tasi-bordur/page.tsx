@@ -33,14 +33,14 @@ export default function KaldirimTasiBordurPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
-                                code: "T001",
+                                code: "KT001",
                                 title: "Klasik Kaldırım Taşı",
                                 image: img("/kaldirim-bordur-urun1.png"),
                                 desc: "Dayanıklı yapısı ve klasik görünümüyle her türlü dış mekana uygun kaldırım taşı.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
-                                code: "T002",
+                                code: "KT002",
                                 title: "Modern Kaldırım Bordür",
                                 image: img("/kaldirim-bordur-urun2.png"),
                                 desc: "Modern peyzaj tasarımlarını tamamlayan, net çizgilere sahip bordür.",

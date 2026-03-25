@@ -33,14 +33,14 @@ export default function AnitPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
-                                code: "A001",
+                                code: "AN001",
                                 title: "Anıt",
                                 image: img("/anit-urun1.png"),
                                 desc: "Özel tasarım anıt mezar projesi. Mermer ve granitten kaliteli işçilik.",
                                 price: "Fiyat Teklifi Al"
                             },
                             {
-                                code: "A002",
+                                code: "AN002",
                                 title: "Şehitlik Anıtı",
                                 image: img("/anit-urun2.png"),
                                 desc: "Şehitlerimizin anısını yaşatmak için tasarlanan özel anıt projesi.",

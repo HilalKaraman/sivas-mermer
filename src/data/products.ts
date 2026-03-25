@@ -190,8 +190,8 @@ export const productsData = [
     { code: "M016", title: "Özel Kenarlı Mezar", image: img("/mezar-urun16.png"), desc: "Farklı kesim detaylarına sahip özgün tasarımlı mermer mezar.", href: "/koleksiyonlar/mezar-tasi" },
 
     // --- ANIT ---
-    { code: "A001", title: "Anıt", image: img("/anit-urun1.png"), desc: "Özel tasarım anıt mezar projesi. Mermer ve granitten kaliteli işçilik.", href: "/koleksiyonlar/anit" },
-    { code: "A002", title: "Tek Kişilik Anıt", image: img("/anit.jpeg"), desc: "Sade ve asil görünümüyle tek kişilik mermer anıt mezar modeli.", href: "/koleksiyonlar/anit" },
+    { code: "AN001", title: "Anıt", image: img("/anit-urun1.png"), desc: "Özel tasarım anıt mezar projesi. Mermer ve granitten kaliteli işçilik.", href: "/koleksiyonlar/anit" },
+    { code: "AN002", title: "Tek Kişilik Anıt", image: img("/anit.jpeg"), desc: "Sade ve asil görünümüyle tek kişilik mermer anıt mezar modeli.", href: "/koleksiyonlar/anit" },
 
     // --- ÇEŞME ---
     { code: "C001", title: "Klasik Hayrat Çeşmesi", image: img("/cesme.png"), desc: "Osmanlı motifleriyle bezenmiş, geleneksel tek kurnalı tasarım.", href: "/koleksiyonlar/cesme" },
@@ -223,8 +223,8 @@ export const productsData = [
     { code: "R009", title: "Özel Tasarım Merdiven", image: img("/merdiven-urun9.png"), desc: "Geniş alanlar için özel olarak tasarlanmış geniş açılı mermer merdivenler.", href: "/koleksiyonlar/merdiven" },
 
     // --- KALDIRIM TAŞI BORDÜR ---
-    { code: "T001", title: "Klasik Kaldırım Taşı", image: img("/kaldirim-bordur-urun1.png"), desc: "Dayanıklı yapısı ve klasik görünümüyle her türlü dış mekana uygun kaldırım taşı.", href: "/koleksiyonlar/kaldirim-tasi-bordur" },
-    { code: "T002", title: "Modern Kaldırım Bordür", image: img("/kaldirim-bordur-urun2.png"), desc: "Modern peyzaj tasarımlarını tamamlayan, net çizgilere sahip bordür.", href: "/koleksiyonlar/kaldirim-tasi-bordur" },
+    { code: "KT001", title: "Klasik Kaldırım Taşı", image: img("/kaldirim-bordur-urun1.png"), desc: "Dayanıklı yapısı ve klasik görünümüyle her türlü dış mekana uygun kaldırım taşı.", href: "/koleksiyonlar/kaldirim-tasi-bordur" },
+    { code: "KT002", title: "Modern Kaldırım Bordür", image: img("/kaldirim-bordur-urun2.png"), desc: "Modern peyzaj tasarımlarını tamamlayan, net çizgilere sahip bordür.", href: "/koleksiyonlar/kaldirim-tasi-bordur" },
 
     // --- BAŞ TAŞI ---
     { code: "B001", title: "Traverten Baş Taşı", image: img("/bas-tasi-urun1.png"), desc: "Özel tasarım mermer baş taşı.", href: "/koleksiyonlar/mermer-bas-tasi" },

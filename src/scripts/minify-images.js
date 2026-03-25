@@ -15,7 +15,7 @@ const path = require("path");
 
 // ─── Ayarlar ────────────────────────────────────────────────────────────────
 const PUBLIC_DIR = path.join(__dirname, "../../public/not_converted");
-const OUTPUT_DIR = path.join(PUBLIC_DIR, "minify");
+const OUTPUT_DIR = path.join(__dirname, "../../public/minify");
 
 // Maksimum genişlik/yükseklik (oranı koruyarak küçültür)
 // Ürün fotoğrafları için 1920px yeterli; web'de daha büyük açılmaz
