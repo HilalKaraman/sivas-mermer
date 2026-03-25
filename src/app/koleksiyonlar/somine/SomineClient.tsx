@@ -14,56 +14,56 @@ export default function SomineClient() {
         {
             code: "S001",
             title: "Klasik Şömine",
-            image: img("/somine-urun1.png"),
+            image: img("/somine-urun1.jpg"),
             desc: "Geleneksel motiflerle bezenmiş, salonunuza asillik katan klasik şömine modeli.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S002",
             title: "Modern Şömine Tasarımı",
-            image: img("/somine-urun2.png"),
+            image: img("/somine-urun2.jpg"),
             desc: "Minimalist hatlar ve doğal taşın uyumuyla tasarlanan modern şömine.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S003",
             title: "Granit Şömine",
-            image: img("/somine-urun3.png"),
+            image: img("/somine-urun3.jpg"),
             desc: "Granitin dayanıklılığı ve şıklığını bir arada sunan özel tasarım.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S004",
             title: "Dekoratif Şömine",
-            image: img("/somine-urun4.png"),
+            image: img("/somine-urun4.jpg"),
             desc: "Mekanınıza sanatsal bir dokunuş katan dekoratif taş şömine.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S005",
             title: "Köşe Şömine Modeli",
-            image: img("/somine-urun5.png"),
+            image: img("/somine-urun5.jpg"),
             desc: "Mekan kullanımını optimize eden şık köşe şömine uygulaması.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S006",
             title: "Mermer Şömine",
-            image: img("/somine-urun6.png"),
+            image: img("/somine-urun6.jpg"),
             desc: "Mermerin eşsiz damar yapısıyla her biri sanat eseri niteliğinde şömineler.",
             price: "Fiyat Teklifi Al"
         },
         {
             code: "S007",
             title: "Özel Tasarım Şömine",
-            image: img("/somine-urun7.png"),
+            image: img("/somine-urun7.jpg"),
             desc: "İsteklerinize ve mekanınıza özel olarak projelendirilen şömine çözümleri.",
             price: "Fiyat Teklifi Al"
         },
         ...Array.from({ length: 16 }).map((_, i) => ({
             code: `S0${(i + 8).toString().padStart(2, '0')}`,
             title: "Özel Tasarım Şömine",
-            image: `/somine-urun${i + 8}.png`,
+            image: img(`/somine-urun${i + 8}.jpg`),
             desc: "İsteklerinize ve mekanınıza özel detaylarla tasarlanmış şömine uygulaması.",
             price: "Fiyat Teklifi Al"
         }))
@@ -154,14 +154,13 @@ export default function SomineClient() {
                         <button
                             onClick={() => handlePageChange(currentPage - 1)}
                             disabled={currentPage === 1}
-                            className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${
-                                currentPage === 1 
-                                ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed' 
-                                : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
-                            }`}
+                            className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${currentPage === 1
+                                    ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed'
+                                    : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
+                                }`}
                             aria-label="Previous page"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
                         </button>
 
                         <div className="flex gap-2">
@@ -169,11 +168,10 @@ export default function SomineClient() {
                                 <button
                                     key={i + 1}
                                     onClick={() => handlePageChange(i + 1)}
-                                    className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm transition-all duration-300 ${
-                                        currentPage === i + 1 
-                                        ? 'bg-[var(--gold)] text-white shadow-lg transform -translate-y-1' 
-                                        : 'bg-white text-[var(--charcoal)] border border-[var(--border-light)] hover:border-[var(--gold)] hover:text-[var(--gold)] shadow-sm hover:shadow-md transform hover:-translate-y-1'
-                                    }`}
+                                    className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm transition-all duration-300 ${currentPage === i + 1
+                                            ? 'bg-[var(--gold)] text-white shadow-lg transform -translate-y-1'
+                                            : 'bg-white text-[var(--charcoal)] border border-[var(--border-light)] hover:border-[var(--gold)] hover:text-[var(--gold)] shadow-sm hover:shadow-md transform hover:-translate-y-1'
+                                        }`}
                                 >
                                     {i + 1}
                                 </button>
@@ -183,14 +181,13 @@ export default function SomineClient() {
                         <button
                             onClick={() => handlePageChange(currentPage + 1)}
                             disabled={currentPage === totalPages}
-                            className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${
-                                currentPage === totalPages 
-                                ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed' 
-                                : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
-                            }`}
+                            className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${currentPage === totalPages
+                                    ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed'
+                                    : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
+                                }`}
                             aria-label="Next page"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
                         </button>
                     </div>
                 )}
@@ -202,7 +199,7 @@ export default function SomineClient() {
                     to { opacity: 1; transform: translateY(0); }
                 }
             `}</style>
-            
+
             <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[var(--cream)] to-transparent pointer-events-none"></div>
         </section>
     );
