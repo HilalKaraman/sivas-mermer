@@ -91,7 +91,7 @@ export default function SomineClient() {
 
     const agacProducts = agacFilenames.map((filename, i) => ({
         code: `A0${(i + 1).toString().padStart(2, '0')}`,
-        title: "Sivas Doğal Ağaç Şömine",
+        title: "Doğal Ağaç Şömine",
         image: img(`/${filename}`),
         desc: "Doğal ahşabın eşsiz sıcaklığını ve modern şıklığı bir araya getiren özel tasarım şömine çözümleri.",
         price: "Fiyat Teklifi Al"
@@ -156,10 +156,11 @@ export default function SomineClient() {
                                     src={img("/somine-urun5.jpg")}
                                     alt="Mermer Şömine"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 transition-opacity duration-700 group-hover:opacity-90" />
-                                
+
                                 {/* Inner Decorative Border */}
                                 <div className="absolute inset-4 border border-white/20 rounded-xl transition-all duration-700 group-hover:border-[var(--gold)]/50 group-hover:inset-3 z-10 pointer-events-none"></div>
 
@@ -172,7 +173,7 @@ export default function SomineClient() {
                                     </p>
                                     <div className="flex items-center gap-2 text-[var(--gold)] font-bold text-sm tracking-wider uppercase opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-200">
                                         <span>Koleksiyonu İncele</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                                     </div>
                                 </div>
                             </div>
@@ -189,6 +190,7 @@ export default function SomineClient() {
                                     src={img("/Gemini_Generated_Image_2caqre2caqre2caq.jpg")}
                                     alt="Ağaç Şömine"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                     onError={(e) => {
                                         // Resim yüklenemezse şık bir fallback göster
@@ -196,7 +198,7 @@ export default function SomineClient() {
                                     }}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 transition-opacity duration-700 group-hover:opacity-90" />
-                                
+
                                 {/* Inner Decorative Border */}
                                 <div className="absolute inset-4 border border-white/20 rounded-xl transition-all duration-700 group-hover:border-[var(--gold)]/50 group-hover:inset-3 z-10 pointer-events-none"></div>
 
@@ -209,7 +211,7 @@ export default function SomineClient() {
                                     </p>
                                     <div className="flex items-center gap-2 text-[var(--gold)] font-bold text-sm tracking-wider uppercase opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-200">
                                         <span>Koleksiyonu İncele</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                                     </div>
                                 </div>
                             </div>
@@ -237,15 +239,16 @@ export default function SomineClient() {
                         ) : (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[500px]">
                                 {currentItems.map((item, index) => (
-                                    <div key={`${item.code}-${currentPage}`} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-[var(--border-light)] transform hover:-translate-y-2 flex flex-col opacity-0" style={{ animation: `fadeIn 0.6s ease-out forwards ${index * 100}ms` }}>
+                                    <div key={`${item.code}-${index}-${currentPage}`} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-[var(--border-light)] transform hover:-translate-y-2 flex flex-col opacity-0" style={{ animation: `fadeIn 0.6s ease-out forwards ${index * 100}ms` }}>
                                         <div className="relative aspect-[3/4] overflow-hidden bg-[var(--cream-dark)]">
                                             <Image
                                                 src={item.image}
                                                 alt={item.title}
                                                 fill
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 style={
-                                                    item.image.includes('somine-urun1.jpg') 
-                                                        ? { objectPosition: "100% center" } 
+                                                    item.image.includes('somine-urun1.jpg')
+                                                        ? { objectPosition: "100% center" }
                                                         : item.code === 'A002'
                                                             ? { objectPosition: "center 80%" }
                                                             : {}

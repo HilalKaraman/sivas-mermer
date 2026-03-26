@@ -135,6 +135,7 @@ export default function TezgahClient() {
                                         src={cat.image}
                                         alt={cat.title}
                                         fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                         onError={(e) => {
                                             e.currentTarget.style.display = 'none';
@@ -181,12 +182,13 @@ export default function TezgahClient() {
                         ) : (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[500px]">
                                 {currentItems.map((item, index) => (
-                                    <div key={`${item.code}-${currentPage}`} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-[var(--border-light)] transform hover:-translate-y-2 flex flex-col opacity-0" style={{ animation: `fadeIn 0.6s ease-out forwards ${index * 100}ms` }}>
+                                    <div key={`${item.code}-${index}-${currentPage}`} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-[var(--border-light)] transform hover:-translate-y-2 flex flex-col opacity-0" style={{ animation: `fadeIn 0.6s ease-out forwards ${index * 100}ms` }}>
                                         <div className="relative aspect-[3/4] overflow-hidden bg-[var(--cream-dark)]">
                                             <Image
                                                 src={item.image}
                                                 alt={item.title}
                                                 fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                                             />
                                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
