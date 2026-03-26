@@ -40,9 +40,23 @@ export default function TezgahClient() {
         desc: "Banyolarınızın atmosferini değiştirecek, neme dayanıklı ve estetik tezgah uygulamaları.",
     }));
 
+    const belankoProducts = Array.from({ length: 5 }).map((_, i) => ({
+        code: `TE0${(i + 1).toString().padStart(2, '0')}`,
+        title: "Belanko Tezgah",
+        image: img(`/belanko-tezgah${i + 1}.jpg`),
+        desc: "Şıklığı ve leke tutmayan kuvars yapısıyla uzun ömürlü kullanım sunan belanko tezgah modelleri.",
+    }));
+
+    const betonProducts = Array.from({ length: 9 }).map((_, i) => ({
+        code: `TC0${(i + 1).toString().padStart(2, '0')}`,
+        title: "Beton Tezgah",
+        image: img(`/beton-tezgah${i + 1}.jpg`),
+        desc: "Endüstriyel görünümü ve ultra dayanıklılığı ile öne çıkan, modern beton tezgâh tasarımları.",
+    }));
+
     const products = selectedCategory === "mermer"
         ? mermerProducts
-        : (selectedCategory === "agac" ? agacProducts : (selectedCategory === "banyo" ? banyoProducts : []));
+        : (selectedCategory === "agac" ? agacProducts : (selectedCategory === "banyo" ? banyoProducts : (selectedCategory === "belanko" ? belankoProducts : (selectedCategory === "beton" ? betonProducts : []))));
 
     const totalPages = Math.ceil(products.length / itemsPerPage);
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -72,9 +86,9 @@ export default function TezgahClient() {
 
     const categories = [
         { id: "mermer" as CategoryType, title: "Mermer Tezgah", image: img("/tezgah.png"), desc: "Doğal mermer ve granitin eşsiz dokusuyla mutfağınıza değer katan dayanıklı tezgah çözümleri." },
-        { id: "cam" as CategoryType, title: "Cam Mutfak Tezgahı", image: img("/tezgah-urun2.png"), desc: "Modern, hijyenik ve kolay temizlenebilir yapısıyla mutfaklara ferahlık katan şık cam tezgahlar." },
-        { id: "beton" as CategoryType, title: "Beton Tezgah", image: img("/tezgah-urun3.png"), desc: "Endüstriyel görünümü ve ultra dayanıklılığı ile öne çıkan, modern beton tezgâh tasarımları." },
-        { id: "belanko" as CategoryType, title: "Belanko Tezgah", image: img("/tezgah-urun4.png"), desc: "Şıklığı ve leke tutmayan kuvars yapısıyla uzun ömürlü kullanım sunan belanko tezgah modelleri." },
+        { id: "cam" as CategoryType, title: "Cam Mutfak ve Tezgah", image: img("/tezgah-urun2.png"), desc: "Modern, hijyenik ve kolay temizlenebilir yapısıyla mutfaklara ferahlık katan şık cam tezgahlar." },
+        { id: "beton" as CategoryType, title: "Beton Tezgah", image: img("/beton-tezgah1.jpg"), desc: "Endüstriyel görünümü ve ultra dayanıklılığı ile öne çıkan, modern beton tezgâh tasarımları." },
+        { id: "belanko" as CategoryType, title: "Belanko Tezgah", image: img("/belanko-tezgah1.jpg"), desc: "Şıklığı ve leke tutmayan kuvars yapısıyla uzun ömürlü kullanım sunan belanko tezgah modelleri." },
         { id: "banyo" as CategoryType, title: "Banyo Tezgahı", image: img("/banyo-tezgah1.jpg"), desc: "Banyolarınızın atmosferini değiştirecek, neme dayanıklı ve estetik tezgah uygulamaları." },
         { id: "agac" as CategoryType, title: "Ağaç Mutfak Tezgahı", image: img("/agac-tezgah14.jpg"), desc: "Doğal ahşabın sıcaklığını ve eşsiz dokusunu mutfağınıza taşıyan özel üretim ahşap tezgahlar." }
     ];
