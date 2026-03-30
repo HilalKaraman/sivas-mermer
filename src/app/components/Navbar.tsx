@@ -38,8 +38,8 @@ export default function Navbar() {
                         </Link>
 
                         {/* Desktop Menu & Search */}
-                        <div className="hidden md:flex items-center gap-8">
-                            <div className="flex items-center gap-8 mr-4">
+                        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+                            <div className="flex items-center gap-6 xl:gap-8 mr-2 xl:mr-4">
                                 {menuItems.map((item) => (
                                     <Link
                                         key={item.name}
@@ -68,7 +68,7 @@ export default function Navbar() {
                         </div>
 
                         {/* Mobile Controls (Search + Menu) */}
-                        <div className="flex items-center gap-2 md:hidden">
+                        <div className="flex items-center gap-2 lg:hidden">
                             <button
                                 onClick={() => setIsSearchOpen(true)}
                                 className="p-2 text-[var(--charcoal)] z-50 relative hover:text-[var(--gold)] transition-colors"
@@ -96,7 +96,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu - Full Screen Overlay */}
                 {isOpen && (
-                    <div className="md:hidden fixed top-0 left-0 w-screen h-screen z-40 bg-[var(--cream)] flex flex-col items-center justify-center">
+                    <div className="lg:hidden fixed top-0 left-0 w-screen h-screen z-40 bg-[var(--cream)] flex flex-col items-center justify-center">
                         <div className="flex flex-col items-center space-y-8">
                             {menuItems.map((item) => (
                                 <Link
