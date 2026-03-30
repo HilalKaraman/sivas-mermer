@@ -14,21 +14,30 @@ export default function MezarTasiClient() {
     const itemsPerPage = 6;
 
     const klasikProducts = [
-        { code: "M001", title: "Mermer Mezar", image: img("/mezar-urun1.png"), desc: "Sade ve şık tasarımıyla öne çıkan, beyaz mermer tek kişilik mezar modeli.", price: "Fiyat Teklifi Al" },
-        { code: "M002", title: "Mermer Mezar", image: img("/mezar-urun2.png"), desc: "Sade ve şık tasarımıyla öne çıkan, beyaz mermer tek kişilik mezar modeli.", price: "Fiyat Teklifi Al" },
-        { code: "M003", title: "Mermer Mezar", image: img("/mezar-urun3.png"), desc: "Siyahın asaletini yansıtan, uzun ömürlü ve gösterişli mezar.", price: "Fiyat Teklifi Al" },
-        { code: "M005", title: "Mermer Blok Mezar", image: img("/mezar-urun12.png"), desc: "Kalın blok mermerden üretilmiş, sağlam ve heybetli mezar yapısı.", price: "Fiyat Teklifi Al" },
-        { code: "M006", title: "Mermer Mezar", image: img("/mezar-urun6.png"), desc: "İsteklerinize göre şekillendirilen, taş sanatının inceliklerini taşıyan özel tasarım.", price: "Fiyat Teklifi Al" },
-        { code: "M008", title: "Beyaz Mermer Mezar", image: img("/mezar-urun14.png"), desc: "Beyaz mermer kullanılarak yapılan, lekesiz ve pürüzsüz mezar.", price: "Fiyat Teklifi Al" },
-        { code: "M009", title: "Mermer Mezar", image: img("/mezar-urun9.png"), desc: "Modern malzemelerle güçlendirilmiş, yeni nesil mezar çözümü.", price: "Fiyat Teklifi Al" },
-        { code: "M010", title: "Klasik Traverten Mezar", image: img("/mezar-urun10.png"), desc: "Geleneksel baş taşı formuna sahip, klasik ve zamansız mezar modeli.", price: "Fiyat Teklifi Al" },
-        { code: "M011", title: "Mermer Mezar", image: img("/mezar-urun15.png"), desc: "Estetik görünümü ile dikkat çeken özel mezar taşı modeli.", price: "Fiyat Teklifi Al" },
-        { code: "M012", title: "Mermer Mezar", image: img("/mezar-urun16.png"), desc: "Dayanıklı yapısı ve şık tasarımıyla öne çıkan mermer mezar.", price: "Fiyat Teklifi Al" }
+        { code: "M001", title: "Mermer Mezar", image: img("/mezar-urun1.jpg"), desc: "Sade ve şık tasarımıyla öne çıkan, mermer tek kişilik mezar modeli.", price: "Fiyat Teklifi Al" },
+        { code: "M006", title: "Mermer Mezar", image: img("/mezar-urun6.jpg"), desc: "İsteklerinize göre şekillendirilen, taş sanatının inceliklerini taşıyan özel tasarım.", price: "Fiyat Teklifi Al" },
+        { code: "M017", title: "Mermer Mezar", image: img("/mezar-urun17.jpg"), desc: "Dayanıklı ve gösterişli yapısıyla öne çıkan şık mermer mezar kabristanı.", price: "Fiyat Teklifi Al" },
+        { code: "M018", title: "Mermer Mezar", image: img("/mezar-urun18.jpg"), desc: "Zarif detaylara sahip, uzun ömürlü mermer işçiliği ile hazırlanan mezar.", price: "Fiyat Teklifi Al" },
+        { code: "M019", title: "Mermer Mezar", image: img("/mezar-urun19.jpg"), desc: "Geleneksel baş taşı formuna sahip, klasik ve zamansız mermer modellerimiz.", price: "Fiyat Teklifi Al" },
+        { code: "M020", title: "Mermer Mezar", image: img("/mezar-urun20.jpg"), desc: "İnce işçilikle hazırlanan özel üretim sağlam mermer yapı tarzı.", price: "Fiyat Teklifi Al" },
+        { code: "M021", title: "Mermer Mezar", image: img("/mezar-urun21.jpg"), desc: "Yüksek dayanımlı ve uzun ömürlü birinci sınıf mermer mezar taşı tasarımı.", price: "Fiyat Teklifi Al" }
     ];
 
     const aileProducts = [
-        { code: "M004", title: "Aile Mezarı", image: img("/mezar-urun11.png"), desc: "İsteklerinize göre şekillendirilen, taş sanatının inceliklerini taşıyan özel tasarım.", price: "Fiyat Teklifi Al" },
-        { code: "M007", title: "Aile Mezarı", image: img("/mezar-urun13.png"), desc: "Yan yana definler için uygun, estetik bütünlüğe sahip çift kişilik mezar.", price: "Fiyat Teklifi Al" }
+        { code: "MA001", title: "Aile Mezarı", image: img("/aile-mezar1.jpg"), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları.", price: "Fiyat Teklifi Al" },
+        { code: "MA002", title: "Aile Mezarı", image: img("/aile-mezar2.jpg"), desc: "Zamanın yıpratıcı etkilerine karşı dayanıklı mermer veya granit tasarımlar.", price: "Fiyat Teklifi Al" },
+        { code: "MA003", title: "Aile Mezarı", image: img("/aile-mezar3.jpg"), desc: "Birden fazla kabri estetik bağlarla bütünleştiren özel aile mezarı dizaynı.", price: "Fiyat Teklifi Al" },
+        { code: "MA004", title: "Aile Mezarı", image: img("/aile-mezar4.jpg"), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları.", price: "Fiyat Teklifi Al" },
+        { code: "MA005", title: "Aile Mezarı", image: img("/aile-mezar5.jpg"), desc: "Zamanın yıpratıcı etkilerine karşı dayanıklı mermer veya granit tasarımlar.", price: "Fiyat Teklifi Al" },
+        { code: "MA006", title: "Aile Mezarı", image: img("/aile-mezar6.jpg"), desc: "Birden fazla kabri estetik bağlarla bütünleştiren özel aile mezarı dizaynı.", price: "Fiyat Teklifi Al" },
+        { code: "MA007", title: "Aile Mezarı", image: img("/aile-mezar7.jpg"), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları.", price: "Fiyat Teklifi Al" },
+        { code: "MA008", title: "Aile Mezarı", image: img("/aile-mezar8.jpg"), desc: "Zamanın yıpratıcı etkilerine karşı dayanıklı mermer veya granit tasarımlar.", price: "Fiyat Teklifi Al" },
+        { code: "MA009", title: "Aile Mezarı", image: img("/aile-mezar9.jpg"), desc: "Birden fazla kabri estetik bağlarla bütünleştiren özel aile mezarı dizaynı.", price: "Fiyat Teklifi Al" },
+        { code: "MA010", title: "Aile Mezarı", image: img("/aile-mezar10.jpg"), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları.", price: "Fiyat Teklifi Al" },
+        { code: "MA011", title: "Aile Mezarı", image: img("/aile-mezar11.jpg"), desc: "Zamanın yıpratıcı etkilerine karşı dayanıklı mermer veya granit tasarımlar.", price: "Fiyat Teklifi Al" },
+        { code: "MA012", title: "Aile Mezarı", image: img("/aile-mezar12.jpg"), desc: "Birden fazla kabri estetik bağlarla bütünleştiren özel aile mezarı dizaynı.", price: "Fiyat Teklifi Al" },
+        { code: "MA013", title: "Aile Mezarı", image: img("/aile-mezar13.jpg"), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları.", price: "Fiyat Teklifi Al" },
+        { code: "MA014", title: "Aile Mezarı", image: img("/aile-mezar14.jpg"), desc: "Zamanın yıpratıcı etkilerine karşı dayanıklı mermer veya granit tasarımlar.", price: "Fiyat Teklifi Al" }
     ];
 
     const bebekProducts: typeof klasikProducts = [
@@ -98,9 +107,9 @@ export default function MezarTasiClient() {
     };
 
     const categories = [
-        { id: "klasik" as CategoryType, title: "Klasik Mezar", image: img("/mezar-urun1.png"), desc: "Geleneksel çizgilere sahip, zarif ve dayanıklı standart tek kişilik mermer mezar modellerimiz." },
+        { id: "klasik" as CategoryType, title: "Klasik Mezar", image: img("/mezar-urun1.jpg"), desc: "Geleneksel çizgilere sahip, zarif ve dayanıklı standart tek kişilik mermer mezar modellerimiz." },
         { id: "bebek" as CategoryType, title: "Bebek Mezarı", image: img("/cocuk-mezar5.jpg"), desc: "Özenle ve hassasiyetle tasarlanmış, sade görünümlü mermer bebek mezar modellerimiz." },
-        { id: "aile" as CategoryType, title: "Aile Mezarı", image: img("/mezar-urun11.png"), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları." },
+        { id: "aile" as CategoryType, title: "Aile Mezarı", image: img("/aile-mezar1.jpg"), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları." },
         { id: "farkli" as CategoryType, title: "Farklı Mezar", image: img("/farkli-mezar10.jpg"), desc: "Alışılmışın dışında özel tasarım ve mimari dokunuşlarla hazırlanan eşsiz sanat eseri modeller." }
     ];
 
