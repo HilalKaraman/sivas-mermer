@@ -18,7 +18,7 @@ export const categories: Product[] = [
         id: "koleksiyonlar/mermer-bas-tasi",
         title: "Mermer Baş Taşı",
         description: "Estetik ve dayanaklı, özel tasarım mermer baş taşları.",
-        image: img("/bas-tasi-urun1.png"),
+        image: img("/bas-tasi20.jpg"),
     },
     {
         id: "koleksiyonlar/anit",

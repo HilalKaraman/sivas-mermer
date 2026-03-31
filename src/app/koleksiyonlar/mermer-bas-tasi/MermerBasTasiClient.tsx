@@ -11,23 +11,33 @@ export default function MermerBasTasiClient() {
     const itemsPerPage = 6;
 
     const products = [
-                            {
-                                code: "B001",
-                                title: 'Traverten Baş Taşı',
-                                image: img('/bas-tasi-urun1.png'),
-
-                                desc: 'Özel tasarım mermer baş taşı.',
-                                price: 'Fiyat Teklifi Al',
-                            },
-                            {
-                                code: "B002",
-                                title: 'Mermer Baş Taşı',
-                                image: img('/bas-tasi-urun2.png'),
-
-                                desc: 'Estetik ve dayanıklı traverten baş taşı modeli.',
-                                price: 'Fiyat Teklifi Al',
-                            },
-                        ];
+        { code: "B001", title: 'Traverten Baş Taşı', image: img('/bas-tasi-urun1.png'), desc: 'Özel tasarım mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B002", title: 'Mermer Baş Taşı', image: img('/bas-tasi-urun2.png'), desc: 'Estetik ve dayanıklı traverten baş taşı modeli.', price: 'Fiyat Teklifi Al' },
+        { code: "B003", title: 'Mermer Baş Taşı', image: img('/bas-tasi3.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B004", title: 'Mermer Baş Taşı', image: img('/bas-tasi4.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B005", title: 'Mermer Baş Taşı', image: img('/bas-tasi5.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B006", title: 'Mermer Baş Taşı', image: img('/bas-tasi6.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B007", title: 'Mermer Baş Taşı', image: img('/bas-tasi7.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B008", title: 'Mermer Baş Taşı', image: img('/bas-tasi8.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B009", title: 'Mermer Baş Taşı', image: img('/bas-tasi9.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B010", title: 'Mermer Baş Taşı', image: img('/bas-tasi10.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B011", title: 'Mermer Baş Taşı', image: img('/bas-tasi11.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B012", title: 'Mermer Baş Taşı', image: img('/bas-tasi12.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B013", title: 'Mermer Baş Taşı', image: img('/bas-tasi13.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B014", title: 'Mermer Baş Taşı', image: img('/bas-tasi14.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B016", title: 'Mermer Baş Taşı', image: img('/bas-tasi16.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B017", title: 'Mermer Baş Taşı', image: img('/bas-tasi17.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B018", title: 'Mermer Baş Taşı', image: img('/bas-tasi18.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B019", title: 'Mermer Baş Taşı', image: img('/bas-tasi19.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B020", title: 'Mermer Baş Taşı', image: img('/bas-tasi20.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B021", title: 'Mermer Baş Taşı', image: img('/bas-tasi21.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B022", title: 'Mermer Baş Taşı', image: img('/bas-tasi22.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B023", title: 'Mermer Baş Taşı', image: img('/bas-tasi23.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B024", title: 'Mermer Baş Taşı', image: img('/bas-tasi24.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B025", title: 'Mermer Baş Taşı', image: img('/bas-tasi25.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B026", title: 'Mermer Baş Taşı', image: img('/bas-tasi26.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' },
+        { code: "B027", title: 'Mermer Baş Taşı', image: img('/bas-tasi27.jpg'), desc: 'Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.', price: 'Fiyat Teklifi Al' }
+    ];
 
     const totalPages = Math.ceil(products.length / itemsPerPage);
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -55,7 +65,7 @@ export default function MermerBasTasiClient() {
                     <div className="w-24 h-1 bg-[var(--gold)] mx-auto rounded-full"></div>
                     <p className="mt-4 text-[var(--grey-medium)] max-w-2xl mx-auto">
                         Sevdiklerinizin anısını yaşatmak için en kaliteli mermer ve
-                            granitten, özenle işlenmiş baş taşı modelleri.
+                        granitten, özenle işlenmiş baş taşı modelleri.
                     </p>
                 </div>
 
@@ -69,6 +79,7 @@ export default function MermerBasTasiClient() {
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    unoptimized
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
 
