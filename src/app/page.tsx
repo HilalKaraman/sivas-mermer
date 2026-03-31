@@ -43,7 +43,7 @@ export default function Home() {
                         src={product.image}
                         alt={product.title}
                         fill
-                        style={{ objectPosition: "center 12%" }}
+                        style={{ objectPosition: product.objectPosition || "center 12%" }}
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (

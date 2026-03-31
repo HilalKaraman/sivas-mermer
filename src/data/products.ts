@@ -5,6 +5,7 @@ export type Product = {
     title: string;
     description: string;
     image: string;
+    objectPosition?: string;
 };
 
 export const categories: Product[] = [
@@ -37,12 +38,14 @@ export const categories: Product[] = [
         title: "Çeşme",
         description: "Geleneksel ve modern tasarımlarla mermer ve taş hayrat çeşmeleri.",
         image: img("/cesme1.jpg"),
+        objectPosition: "center center",
     },
     {
         id: "koleksiyonlar/somine",
         title: "Şömine",
         description: "Doğal taş ve mermerden özel tasarım şömine modelleri.",
         image: img("/somine.png"),
+        objectPosition: "center center",
     },
     {
         id: "koleksiyonlar/mermer-sehpa",
