@@ -36,7 +36,7 @@ export const categories: Product[] = [
         id: "koleksiyonlar/cesme",
         title: "Çeşme",
         description: "Geleneksel ve modern tasarımlarla mermer ve taş hayrat çeşmeleri.",
-        image: img("/cesme.png"),
+        image: img("/cesme1.jpg"),
     },
     {
         id: "koleksiyonlar/somine",
@@ -194,14 +194,14 @@ export const productsData = [
     { code: "AN002", title: "Tek Kişilik Anıt", image: img("/anit.jpeg"), desc: "Sade ve asil görünümüyle tek kişilik mermer anıt mezar modeli.", href: "/koleksiyonlar/anit" },
 
     // --- ÇEŞME ---
-    { code: "C001", title: "Klasik Hayrat Çeşmesi", image: img("/cesme.png"), desc: "Osmanlı motifleriyle bezenmiş, geleneksel tek kurnalı tasarım.", href: "/koleksiyonlar/cesme" },
-    { code: "C002", title: "Mermer Sokak Çeşmesi", image: img("/cesme-urun1.png"), desc: "Park ve bahçeler için uygun, dayanıklı doğal taş yapı.", href: "/koleksiyonlar/cesme" },
-    { code: "C003", title: "Modern Duvar Çeşmesi", image: img("/cesme-urun2.png"), desc: "Modern mimariye uyumlu sade ve şık mermer tasarım.", href: "/koleksiyonlar/cesme" },
-    { code: "C004", title: "Sade Hayrat Çeşmesi", image: img("/cesme-urun3.png"), desc: "Sade ve şık hatlara sahip tek kurnalı mermer çeşme.", href: "/koleksiyonlar/cesme" },
-    { code: "C005", title: "Klasik Çeşme", image: img("/cesme-urun4.png"), desc: "Geleneksel motiflerle bezenmiş Osmanlı tarzı hayrat çeşmesi.", href: "/koleksiyonlar/cesme" },
-    { code: "C006", title: "Duvar Çeşmesi", image: img("/cesme-urun5.png"), desc: "Modern peyzaj tasarımlarına uygun duvara monte çeşme.", href: "/koleksiyonlar/cesme" },
-    { code: "C007", title: "Bahçe Çeşmesi", image: img("/cesme-urun6.png"), desc: "Doğal taş görünümüyle bahçenize estetik katacak çeşme.", href: "/koleksiyonlar/cesme" },
-    { code: "C008", title: "Özel Tasarım Çeşme", image: img("/cesme-urun7.png"), desc: "İhtiyacınıza özel ölçü ve motiflerde üretilen mermer çeşme.", href: "/koleksiyonlar/cesme" },
+    { code: "C001", title: "Klasik Hayrat Çeşmesi", image: img("/cesme1.jpg"), desc: "Osmanlı motifleriyle bezenmiş, geleneksel tek kurnalı tasarım.", href: "/koleksiyonlar/cesme" },
+    { code: "C002", title: "Mermer Sokak Çeşmesi", image: img("/cesme2.jpg"), desc: "Park ve bahçeler için uygun, dayanıklı doğal taş yapı.", href: "/koleksiyonlar/cesme" },
+    { code: "C003", title: "Modern Duvar Çeşmesi", image: img("/cesme3.jpg"), desc: "Modern mimariye uyumlu sade ve şık mermer tasarım.", href: "/koleksiyonlar/cesme" },
+    { code: "C004", title: "Sade Hayrat Çeşmesi", image: img("/cesme4.jpg"), desc: "Sade ve şık hatlara sahip tek kurnalı mermer çeşme.", href: "/koleksiyonlar/cesme" },
+    { code: "C005", title: "Klasik Çeşme", image: img("/cesme5.jpg"), desc: "Geleneksel motiflerle bezenmiş Osmanlı tarzı hayrat çeşmesi.", href: "/koleksiyonlar/cesme" },
+    { code: "C006", title: "Duvar Çeşmesi", image: img("/cesme6.jpg"), desc: "Modern peyzaj tasarımlarına uygun duvara monte çeşme.", href: "/koleksiyonlar/cesme" },
+    { code: "C007", title: "Bahçe Çeşmesi", image: img("/cesme7.jpg"), desc: "Doğal taş görünümüyle bahçenize estetik katacak çeşme.", href: "/koleksiyonlar/cesme" },
+    { code: "C008", title: "Özel Tasarım Çeşme", image: img("/cesme8.jpg"), desc: "İhtiyacınıza özel ölçü ve motiflerde üretilen mermer çeşme.", href: "/koleksiyonlar/cesme" },
 
     // --- DENİZLİK ---
     { code: "Z001", title: "Özel Kesim Denizlik", image: img("/denizlik-urun1.png"), desc: "Pencere ölçülerinize tam uyumlu, özel kesim mermer denizlikler.", href: "/koleksiyonlar/denizlik" },
