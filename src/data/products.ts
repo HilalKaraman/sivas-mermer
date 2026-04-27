@@ -107,6 +107,13 @@ export const categories: Product[] = [
         description: "Geleneksel ve modern hamam ve banyo mermer uygulamaları.",
         image: img("/hamam-urun3.png"),
     },
+    {
+        id: "koleksiyonlar/abdesthane",
+        title: "Abdesthane",
+        description: "Doğal mermerden üretilmiş, geleneksel mimariye uyumlu abdesthane tasarımları.",
+        image: img("/abdesthane3.jpg"),
+        objectPosition: "center center",
+    },
 ];
 
 
