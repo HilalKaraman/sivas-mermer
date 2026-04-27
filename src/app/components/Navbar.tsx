@@ -13,6 +13,7 @@ export default function Navbar() {
         { name: "Ana Sayfa", href: "/" },
         { name: "Hakkımızda", href: "/hakkimizda" },
         { name: "Çalışmalarımız", href: "/#calismalarimiz" },
+        { name: "Projeler", href: "/projeler" },
         { name: "Ürünler", href: "/urunler" },
         { name: "İletişim", href: "/iletisim" },
     ];
@@ -20,20 +21,21 @@ export default function Navbar() {
     return (
         <>
             <nav className="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-[var(--cream)]/95 backdrop-blur-sm border-b border-[var(--border-light)]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
                     <div className="flex justify-between items-center h-20">
                         {/* Logo */}
-                        <Link href="/" className="flex items-center gap-3 shrink-0 z-50 relative">
+                        <Link href="/" className="flex items-center gap-3 shrink-0 z-50 relative lg:-ml-2">
                             <Image
                                 src="/logo.jpeg"
                                 alt="Sivas Mermer Logo"
-                                width={50}
-                                height={50}
-                                className="rounded-full"
+                                width={56}
+                                height={56}
+                                className="rounded-full w-[56px] h-[56px] lg:w-[76px] lg:h-[76px]"
                                 unoptimized
                             />
-                            <span className="text-2xl font-bold tracking-tight text-[var(--charcoal)]">
-                                SİVAS MERMER
+                            <span className="flex flex-col leading-tight">
+                                <span className="text-lg sm:text-xl lg:text-xl font-bold tracking-tight text-[var(--charcoal)]">SİVAS MERMER</span>
+                                <span className="text-[8px] sm:text-[9px] lg:text-[10px] font-semibold tracking-[0.12em] sm:tracking-[0.15em] text-[var(--grey-medium)] uppercase">Maden İnşaat Taahhüt Ltd. Şti.</span>
                             </span>
                         </Link>
 
