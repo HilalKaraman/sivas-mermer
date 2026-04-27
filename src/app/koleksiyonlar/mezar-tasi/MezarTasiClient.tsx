@@ -5,7 +5,7 @@ import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
-type CategoryType = "klasik" | "bebek" | "aile" | "farkli" | null;
+type CategoryType = "klasik" | "bebek" | "aile" | "farkli" | "agac" | null;
 
 export default function MezarTasiClient() {
     const [selectedCategory, setSelectedCategory] = useState<CategoryType>(null);
@@ -72,13 +72,21 @@ export default function MezarTasiClient() {
         { code: "MF020", title: "Özel Tasarım Mezar", image: img("/farkli-mezar20.jpg"), desc: "Standartların ötesinde estetik detaylarla zenginleştirilmiş mermer mezar modeli.", price: "Fiyat Teklifi Al" }
     ];
 
-    const products = selectedCategory === "klasik" 
-        ? klasikProducts 
-        : (selectedCategory === "aile" 
-            ? aileProducts 
-            : (selectedCategory === "bebek" 
-                ? bebekProducts 
-                : (selectedCategory === "farkli" ? farkliProducts : [])));
+    const agacProducts: typeof klasikProducts = [
+        { code: "MG001", title: "Ağaç Mezar", image: img("/agac-mezar1.jpg"), desc: "Doğal ağaç formlarından ilham alınarak tasarlanmış, eşsiz mermer mezar modeli.", price: "Fiyat Teklifi Al" },
+        { code: "MG002", title: "Ağaç Mezar", image: img("/agac-mezar2.jpg"), desc: "Ağaç gövdesi temalı, doğayla bütünleşen özgün mermer mezar tasarımı.", price: "Fiyat Teklifi Al" },
+        { code: "MG003", title: "Ağaç Mezar", image: img("/agac-mezar3.jpg"), desc: "Zarif ağaç motiflerle süslenmiş, doğal ve huzurlu bir anıt mezar.", price: "Fiyat Teklifi Al" },
+    ];
+
+    const products = selectedCategory === "klasik"
+        ? klasikProducts
+        : (selectedCategory === "aile"
+            ? aileProducts
+            : (selectedCategory === "bebek"
+                ? bebekProducts
+                : (selectedCategory === "farkli"
+                    ? farkliProducts
+                    : (selectedCategory === "agac" ? agacProducts : []))));
 
     const totalPages = Math.ceil(products.length / itemsPerPage);
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -88,7 +96,7 @@ export default function MezarTasiClient() {
     const handlePageChange = (pageNumber: number) => {
         setCurrentPage(pageNumber);
         if (sectionRef.current) {
-            const yOffset = -80; 
+            const yOffset = -80;
             const element = sectionRef.current;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
@@ -110,7 +118,8 @@ export default function MezarTasiClient() {
         { id: "klasik" as CategoryType, title: "Klasik Mezar", image: img("/mezar-urun1.jpg"), desc: "Geleneksel çizgilere sahip, zarif ve dayanıklı standart tek kişilik mermer mezar modellerimiz." },
         { id: "bebek" as CategoryType, title: "Bebek Mezarı", image: img("/cocuk-mezar5.jpg"), desc: "Özenle ve hassasiyetle tasarlanmış, sade görünümlü mermer bebek mezar modellerimiz." },
         { id: "aile" as CategoryType, title: "Aile Mezarı", image: img("/aile-mezar1.jpg"), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları." },
-        { id: "farkli" as CategoryType, title: "Farklı Mezar", image: img("/farkli-mezar10.jpg"), desc: "Alışılmışın dışında özel tasarım ve mimari dokunuşlarla hazırlanan eşsiz sanat eseri modeller." }
+        { id: "farkli" as CategoryType, title: "Farklı Mezar", image: img("/farkli-mezar10.jpg"), desc: "Alışılmışın dışında özel tasarım ve mimari dokunuşlarla hazırlanan eşsiz sanat eseri modeller." },
+        { id: "agac" as CategoryType, title: "Ağaç Mezar", image: img("/agac-mezar1.jpg"), desc: "Doğal ağaç formlarından ilham alınarak tasarlanmış, eşsiz mermer mezar modelleri." }
     ];
 
     const getCategoryMessage = () => {
@@ -206,6 +215,7 @@ export default function MezarTasiClient() {
                                                 fill
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                                style={item.code === 'MG002' ? { objectPosition: '20% center' } : {}}
                                             />
                                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
 
@@ -252,11 +262,10 @@ export default function MezarTasiClient() {
                                 <button
                                     onClick={() => handlePageChange(currentPage - 1)}
                                     disabled={currentPage === 1}
-                                    className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${
-                                        currentPage === 1 
-                                        ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed' 
+                                    className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${currentPage === 1
+                                        ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed'
                                         : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
-                                    }`}
+                                        }`}
                                     aria-label="Previous page"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
@@ -267,11 +276,10 @@ export default function MezarTasiClient() {
                                         <button
                                             key={i + 1}
                                             onClick={() => handlePageChange(i + 1)}
-                                            className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm transition-all duration-300 ${
-                                                currentPage === i + 1 
-                                                ? 'bg-[var(--gold)] text-white shadow-lg transform -translate-y-1' 
+                                            className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-sm transition-all duration-300 ${currentPage === i + 1
+                                                ? 'bg-[var(--gold)] text-white shadow-lg transform -translate-y-1'
                                                 : 'bg-white text-[var(--charcoal)] border border-[var(--border-light)] hover:border-[var(--gold)] hover:text-[var(--gold)] shadow-sm hover:shadow-md transform hover:-translate-y-1'
-                                            }`}
+                                                }`}
                                         >
                                             {i + 1}
                                         </button>
@@ -281,11 +289,10 @@ export default function MezarTasiClient() {
                                 <button
                                     onClick={() => handlePageChange(currentPage + 1)}
                                     disabled={currentPage === totalPages}
-                                    className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${
-                                        currentPage === totalPages 
-                                        ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed' 
+                                    className={`w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-300 ${currentPage === totalPages
+                                        ? 'border-[var(--border-light)] text-[var(--grey-light)] cursor-not-allowed'
                                         : 'border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white shadow-sm hover:shadow-md transform hover:-translate-y-1'
-                                    }`}
+                                        }`}
                                     aria-label="Next page"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
