@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { img } from "@/lib/supabase";
 
 /* ─────────── Data ─────────── */
 interface ProjectPhase {
@@ -29,48 +30,48 @@ const projects: Project[] = [
         subtitle: "Mermer Hayrat Çeşme Projesi",
         location: "Sivas",
         year: "2024",
-        coverImage: "/minify/proje-cesme1.jpg",
+        coverImage: img("/proje-cesme1.jpg"),
         description:
             "Geleneksel Osmanlı mimarisinden ilham alan, modern işçilikle hayata geçirilen hayrat çeşmesi projemiz. Çizimden teslimata, her aşamada titizlikle çalışıldı.",
         phases: [
             {
-                image: "/minify/proje-cesme7.jpg",
+                image: img("/proje-cesme7.jpg"),
                 title: "3D Tasarım & Görselleştirme",
                 description:
                     "Projenin yerleşim alanına uygun 3D modelleme ve fotorealistik render çalışması yapıldı.",
             },
             {
-                image: "/minify/proje-cesme2.jpg",
+                image: img("/proje-cesme2.jpg"),
                 title: "Detaylı Çizim & Planlama",
                 description:
                     "Çeşmenin tüm ölçüleri ve süsleme detayları teknik çizimlerle belirlendi.",
             },
             {
-                image: "/minify/proje-cesme3.jpg",
+                image: img("/proje-cesme3.jpg"),
                 title: "Mermer Seçimi & Kesim",
                 description:
                     "Projeye uygun doğal taş blokları seçildi ve CNC ile hassas kesim işlemleri gerçekleştirildi.",
             },
             {
-                image: "/minify/proje-cesme4.jpg",
+                image: img("/proje-cesme4.jpg"),
                 title: "İşleme & Şekillendirme",
                 description:
                     "Ustalarımız tarafından geleneksel el işçiliği ile mermer yüzeylere motifler işlendi.",
             },
             {
-                image: "/minify/proje-cesme5.jpg",
+                image: img("/proje-cesme5.jpg"),
                 title: "Montaj & Kurulum",
                 description:
                     "Parçalar sahada birleştirildi ve çeşme yapısı yerleşim alanına monte edildi.",
             },
             {
-                image: "/minify/proje-cesme-6.jpg",
+                image: img("/proje-cesme-6.jpg"),
                 title: "Detay Çalışması",
                 description:
                     "Süsleme detayları, yazı panoları ve musluklara son rötuşlar yapıldı.",
             },
             {
-                image: "/minify/proje-cesme1.jpg",
+                image: img("/proje-cesme1.jpg"),
                 title: "Tamamlanan Proje",
                 description:
                     "Hayrat çeşmesi başarıyla tamamlanarak hizmete açıldı. Doğal taşın zamansız güzelliği eserimizde hayat buldu.",
@@ -161,7 +162,7 @@ export default function ProjelerClient() {
             <section className="relative overflow-hidden bg-[var(--charcoal)] text-white">
                 <div className="absolute inset-0 opacity-20">
                     <Image
-                        src="/minify/proje-cesme4.jpg"
+                        src={img("/proje-cesme4.jpg")}
                         alt=""
                         fill
                         className="object-cover"

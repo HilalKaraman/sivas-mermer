@@ -5,7 +5,7 @@ import { img } from "@/lib/supabase";
 import Image from 'next/image';
 import Link from 'next/link';
 
-type CategoryType = "klasik" | "bebek" | "aile" | "farkli" | "agac" | null;
+type CategoryType = "klasik" | "bebek" | "aile" | "farkli" | "agac" | "islemeli" | null;
 
 export default function MezarTasiClient() {
     const [selectedCategory, setSelectedCategory] = useState<CategoryType>(null);
@@ -78,6 +78,26 @@ export default function MezarTasiClient() {
         { code: "MG003", title: "Ağaç Mezar", image: img("/agac-mezar3.jpg"), desc: "Zarif ağaç motiflerle süslenmiş, doğal ve huzurlu bir anıt mezar.", price: "Fiyat Teklifi Al" },
     ];
 
+    const islemeliProducts: typeof klasikProducts = [
+        { code: "MI001", title: "İşlemeli Mezar", image: img("/islemeli-mezar1.png"), desc: "Ustaca işlenmiş motiflerle süslenmiş, sanatsal değeri yüksek mermer mezar modeli.", price: "Fiyat Teklifi Al" },
+        { code: "MI002", title: "İşlemeli Mezar", image: img("/islemeli-mezar2.png"), desc: "İnce el işçiliğiyle hazırlanan zarif desenli mermer mezar tasarımı.", price: "Fiyat Teklifi Al" },
+        { code: "MI003", title: "İşlemeli Mezar", image: img("/islemeli-mezar3.png"), desc: "Geleneksel Türk-İslam motiflerinden ilham alınarak işlenmiş özel mezar modeli.", price: "Fiyat Teklifi Al" },
+        { code: "MI004", title: "İşlemeli Mezar", image: img("/islemeli-mezar4.png"), desc: "Detaylı kabartma işçiliğiyle öne çıkan, gösterişli mermer mezar tasarımı.", price: "Fiyat Teklifi Al" },
+        { code: "MI005", title: "İşlemeli Mezar", image: img("/islemeli-mezar5.png"), desc: "Çiçek ve yaprak motifleriyle süslenmiş, doğadan ilham alan işlemeli mezar.", price: "Fiyat Teklifi Al" },
+        { code: "MI006", title: "İşlemeli Mezar", image: img("/islemeli-mezar6.png"), desc: "Zarif hatlarla şekillendirilmiş, estetik değeri yüksek özel üretim mezar modeli.", price: "Fiyat Teklifi Al" },
+        { code: "MI007", title: "İşlemeli Mezar", image: img("/islemeli-mezar7.png"), desc: "Profesyonel taş ustalarının el emeğiyle işlenmiş sanatsal mezar tasarımı.", price: "Fiyat Teklifi Al" },
+        { code: "MI008", title: "İşlemeli Mezar", image: img("/islemeli-mezar8.png"), desc: "Geometrik ve bitkisel desenlerin uyumlu birleşimiyle oluşturulan işlemeli mezar.", price: "Fiyat Teklifi Al" },
+        { code: "MI009", title: "İşlemeli Mezar", image: img("/islemeli-mezar9.png"), desc: "Özenle seçilmiş mermer üzerine ince işçilikle nakşedilmiş benzersiz motifler.", price: "Fiyat Teklifi Al" },
+        { code: "MI010", title: "İşlemeli Mezar", image: img("/islemeli-mezar10.png"), desc: "Klasik ve modern çizgileri harmanlayan, göz alıcı işlemeli mezar modeli.", price: "Fiyat Teklifi Al" },
+        { code: "MI011", title: "İşlemeli Mezar", image: img("/islemeli-mezar11.png"), desc: "Derin kabartma tekniğiyle hayat bulan, dayanıklı ve zarif mermer mezar.", price: "Fiyat Teklifi Al" },
+        { code: "MI012", title: "İşlemeli Mezar", image: img("/islemeli-mezar12.png"), desc: "Hatıraları onurlandıran, sanatsal dokunuşlarla zenginleştirilmiş işlemeli tasarım.", price: "Fiyat Teklifi Al" },
+        { code: "MI013", title: "İşlemeli Mezar", image: img("/islemeli-mezar13.png"), desc: "Eşsiz el oyması detaylarla süslenmiş, kalıcı ve anlamlı mermer mezar.", price: "Fiyat Teklifi Al" },
+        { code: "MI014", title: "İşlemeli Mezar", image: img("/islemeli-mezar14.png"), desc: "İnce rölyef işçiliğiyle hazırlanan, zarif ve etkileyici mezar modeli.", price: "Fiyat Teklifi Al" },
+        { code: "MI015", title: "İşlemeli Mezar", image: img("/islemeli-mezar15.png"), desc: "Özel sipariş üzerine tasarlanan, kişiye özel işlemeli mermer mezar.", price: "Fiyat Teklifi Al" },
+        { code: "MI016", title: "İşlemeli Mezar", image: img("/islemeli-mezar16.png"), desc: "Geleneksel taş oymacılığının en güzel örneklerinden biri olan işlemeli model.", price: "Fiyat Teklifi Al" },
+        { code: "MI017", title: "İşlemeli Mezar", image: img("/islemeli-mezar17.png"), desc: "Usta eller tarafından titizlikle işlenmiş, premium kalitede mermer mezar.", price: "Fiyat Teklifi Al" }
+    ];
+
     const products = selectedCategory === "klasik"
         ? klasikProducts
         : (selectedCategory === "aile"
@@ -86,7 +106,9 @@ export default function MezarTasiClient() {
                 ? bebekProducts
                 : (selectedCategory === "farkli"
                     ? farkliProducts
-                    : (selectedCategory === "agac" ? agacProducts : []))));
+                    : (selectedCategory === "agac"
+                        ? agacProducts
+                        : (selectedCategory === "islemeli" ? islemeliProducts : [])))));
 
     const totalPages = Math.ceil(products.length / itemsPerPage);
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -119,7 +141,8 @@ export default function MezarTasiClient() {
         { id: "bebek" as CategoryType, title: "Bebek Mezarı", image: img("/cocuk-mezar5.jpg"), desc: "Özenle ve hassasiyetle tasarlanmış, sade görünümlü mermer bebek mezar modellerimiz." },
         { id: "aile" as CategoryType, title: "Aile Mezarı", image: img("/aile-mezar1.jpg"), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları." },
         { id: "farkli" as CategoryType, title: "Farklı Mezar", image: img("/farkli-mezar10.jpg"), desc: "Alışılmışın dışında özel tasarım ve mimari dokunuşlarla hazırlanan eşsiz sanat eseri modeller." },
-        { id: "agac" as CategoryType, title: "Ağaç Mezar", image: img("/agac-mezar1.jpg"), desc: "Doğal ağaç formlarından ilham alınarak tasarlanmış, eşsiz mermer mezar modelleri." }
+        { id: "agac" as CategoryType, title: "Ağaç Mezar", image: img("/agac-mezar1.jpg"), desc: "Doğal ağaç formlarından ilham alınarak tasarlanmış, eşsiz mermer mezar modelleri." },
+        { id: "islemeli" as CategoryType, title: "İşlemeli Mezar", image: img("/islemeli-mezar1.png"), desc: "Usta ellerde şekillenen, ince işçilikle nakşedilmiş sanatsal mermer mezar modelleri." }
     ];
 
     const getCategoryMessage = () => {
@@ -144,20 +167,20 @@ export default function MezarTasiClient() {
                 </div>
 
                 {!selectedCategory ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
                         {categories.map((cat, index) => (
                             <div
                                 key={cat.id}
                                 onClick={() => handleCategorySelect(cat.id)}
-                                className="group cursor-pointer relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 opacity-0 flex flex-col h-full"
+                                className="group cursor-pointer relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 opacity-0"
                                 style={{ animation: `fadeIn 0.6s ease-out forwards ${index * 100}ms` }}
                             >
-                                <div className="relative aspect-square overflow-hidden bg-[var(--cream-dark)] w-full flex-grow">
+                                <div className="relative aspect-[4/5] overflow-hidden bg-[var(--cream-dark)] w-full">
                                     <Image
                                         src={cat.image}
                                         alt={cat.title}
                                         fill
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                         style={
                                             cat.id === 'farkli' ? { objectPosition: "center 80%" } : {}
@@ -168,18 +191,18 @@ export default function MezarTasiClient() {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 transition-opacity duration-700 group-hover:opacity-90" />
 
-                                    <div className="absolute inset-3 border border-white/20 rounded-xl transition-all duration-700 group-hover:border-[var(--gold)]/50 group-hover:inset-2 z-10 pointer-events-none"></div>
+                                    <div className="absolute inset-4 border border-white/20 rounded-xl transition-all duration-700 group-hover:border-[var(--gold)]/50 group-hover:inset-3 z-10 pointer-events-none"></div>
 
-                                    <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end h-full z-20">
-                                        <h3 className="text-xl md:text-2xl font-serif font-bold text-white mb-2 transform transition-transform duration-500 group-hover:-translate-y-1 drop-shadow-lg">
+                                    <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end h-full z-20">
+                                        <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-3 transform transition-transform duration-500 group-hover:-translate-y-2 drop-shadow-lg">
                                             {cat.title}
                                         </h3>
-                                        <p className="text-white/80 text-xs mb-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100 line-clamp-2">
+                                        <p className="text-white/80 text-sm mb-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100 line-clamp-2">
                                             {cat.desc}
                                         </p>
-                                        <div className="flex items-center gap-1.5 text-[var(--gold)] font-bold text-[10px] tracking-wider uppercase opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-200">
-                                            <span>İncele</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                                        <div className="flex items-center gap-2 text-[var(--gold)] font-bold text-xs tracking-wider uppercase opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-200">
+                                            <span>Koleksiyonu İncele</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                                         </div>
                                     </div>
                                 </div>

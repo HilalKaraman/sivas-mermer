@@ -276,14 +276,62 @@ export const productsData = [
     { code: "S006", title: "Mermer Şömine", image: img("/somine-urun6.png"), desc: "Mermerin eşsiz damar yapısıyla her biri sanat eseri niteliğinde şömineler.", href: "/koleksiyonlar/somine" },
     { code: "S007", title: "Özel Tasarım Şömine", image: img("/somine-urun7.png"), desc: "İsteklerinize ve mekanınıza özel olarak projelendirilen şömine çözümleri.", href: "/koleksiyonlar/somine" },
 
-    // --- TEZGAH ---
+    // --- TEZGAH (Granit) ---
     { code: "T001", title: "Özel Tasarım Mutfak Tezgahı", image: img("/tezgah-urun1.png"), desc: "Kişiye özel ölçü ve tasarım seçenekleriyle modern mutfak tezgahları.", href: "/koleksiyonlar/tezgah" },
     { code: "T002", title: "Granit Tezgah", image: img("/tezgah.png"), desc: "Doğal taşın dayanıklılığı ve şıklığını mutfağınıza taşıyan granit tezgahlar.", href: "/koleksiyonlar/tezgah" },
     { code: "T003", title: "Tezgah Uygulaması", image: img("/tezgah-urun2.png"), desc: "Dayanıklı ve şık mutfak tezgahı uygulaması.", href: "/koleksiyonlar/tezgah" },
     { code: "T004", title: "Mutfak Tezgahı Modeli", image: img("/tezgah-urun3.png"), desc: "Modern çizgiler ve kaliteli işçilikle üretilen mutfak tezgahı.", href: "/koleksiyonlar/tezgah" },
     { code: "T005", title: "Mutfak Tezgahı", image: img("/tezgah-urun4.png"), desc: "Doğal granitin eşsiz renkleriyle mutfağınıza değer katın.", href: "/koleksiyonlar/tezgah" },
-    { code: "T006", title: "Mutfak Tezgahı", image: img("/tezgah-urun5.png"), desc: "Mutfaklar için suya dayanıklı ve estetik  tezgah çözümleri.", href: "/koleksiyonlar/tezgah" },
+    { code: "T006", title: "Mutfak Tezgahı", image: img("/tezgah-urun5.png"), desc: "Mutfaklar için suya dayanıklı ve estetik tezgah çözümleri.", href: "/koleksiyonlar/tezgah" },
     { code: "T007", title: "Özel Kesim Tezgah", image: img("/tezgah-urun6.png"), desc: "Projenize uygun özel ölçülerde kesilmiş mermer ve granit tezgahlar.", href: "/koleksiyonlar/tezgah" },
-    { code: "T008", title: "Banyo Tezgahı", image: img("/tezgah-urun7.png"), desc: "Estetik görünümü ile banyolarınızın havasını değiştirecek tezgah modeli.", href: "/koleksiyonlar/tezgah" }
+    { code: "T008", title: "Banyo Tezgahı", image: img("/tezgah-urun7.png"), desc: "Estetik görünümü ile banyolarınızın havasını değiştirecek tezgah modeli.", href: "/koleksiyonlar/tezgah" },
+    { code: "T009", title: "Granit Mutfak Tezgahı", image: img("/tezgah11.png"), desc: "Doğal granitin benzersiz desenleriyle mutfağınıza zarif bir dokunuş.", href: "/koleksiyonlar/tezgah" },
+    { code: "T010", title: "Modern Granit Tezgah", image: img("/tezgah12.png"), desc: "Çağdaş tasarım anlayışıyla üretilen yüksek kaliteli granit tezgah.", href: "/koleksiyonlar/tezgah" },
+    { code: "T014", title: "Premium Granit Tezgah", image: img("/tezgah16.png"), desc: "Üst düzey kalite ve şıklık sunan premium granit tezgah çözümleri.", href: "/koleksiyonlar/tezgah" },
+    { code: "T015", title: "Granit Tezgah Tasarımı", image: img("/tezgah17.png"), desc: "Modern ve klasik çizgileri bir arada sunan granit tezgah tasarımı.", href: "/koleksiyonlar/tezgah" },
+    { code: "T016", title: "Doğal Granit Tezgah", image: img("/tezgah18.png"), desc: "Doğanın eşsiz dokusunu mutfağınıza yansıtan doğal granit tezgah.", href: "/koleksiyonlar/tezgah" },
+    { code: "T017", title: "Granit Ada Tezgah", image: img("/tezgah19.png"), desc: "Geniş mutfaklar için ideal, şık ve fonksiyonel granit ada tezgah.", href: "/koleksiyonlar/tezgah" },
+    { code: "T018", title: "Lüks Granit Tezgah", image: img("/tezgah20.png"), desc: "Lüks yaşam alanlarına yakışır, üstün kaliteli granit tezgah modeli.", href: "/koleksiyonlar/tezgah" },
+
+    // --- TEZGAH (Ağaç) ---
+    ...Array.from({ length: 13 }, (_, i) => ({ code: `TA0${(i + 1).toString().padStart(2, '0')}`, title: "Ağaç Mutfak Tezgahı", image: img(`/agac-tezgah${[14, 15, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13][i]}.jpg`), desc: "Doğal ahşabın sıcaklığını ve eşsiz dokusunu mutfağınıza taşıyan özel üretim tezgâh.", href: "/koleksiyonlar/tezgah" })),
+
+    // --- TEZGAH (Banyo) ---
+    ...Array.from({ length: 20 }, (_, i) => ({ code: `TB0${(i + 1).toString().padStart(2, '0')}`, title: "Banyo Tezgahı", image: img(`/banyo-tezgah${i + 1}.jpg`), desc: "Banyolarınızın atmosferini değiştirecek, neme dayanıklı ve estetik tezgah uygulamaları.", href: "/koleksiyonlar/tezgah" })),
+
+    // --- TEZGAH (Belanko) ---
+    ...Array.from({ length: 5 }, (_, i) => ({ code: `TE0${(i + 1).toString().padStart(2, '0')}`, title: "Belanko Tezgah", image: img(`/belanko-tezgah${i + 1}.jpg`), desc: "Şıklığı ve leke tutmayan kuvars yapısıyla uzun ömürlü belanko tezgah modelleri.", href: "/koleksiyonlar/tezgah" })),
+
+    // --- TEZGAH (Beton) ---
+    ...Array.from({ length: 9 }, (_, i) => ({ code: `TC0${(i + 1).toString().padStart(2, '0')}`, title: "Beton Tezgah", image: img(`/beton-tezgah${i + 1}.jpg`), desc: "Endüstriyel görünümü ve ultra dayanıklılığı ile öne çıkan beton tezgâh tasarımları.", href: "/koleksiyonlar/tezgah" })),
+
+    // --- TEZGAH (Cam) ---
+    ...Array.from({ length: 11 }, (_, i) => ({ code: `TCM${(i + 1).toString().padStart(2, '0')}`, title: "Cam Mutfak ve Tezgah", image: img(`/cam-tezgah${i + 1}.jpg`), desc: "Modern, hijyenik ve kolay temizlenebilir yapısıyla mutfaklara ferahlık katan cam tezgahlar.", href: "/koleksiyonlar/tezgah" })),
+
+    // --- MEZAR TAŞI (Aile) ---
+    ...Array.from({ length: 14 }, (_, i) => ({ code: `MA0${(i + 1).toString().padStart(2, '0')}`, title: "Aile Mezarı", image: img(`/aile-mezar${i + 1}.jpg`), desc: "Sevdiklerinizle bir arada olmanızı sağlayan geniş ve ihtişamlı mermer aile kabristanları.", href: "/koleksiyonlar/mezar-tasi" })),
+
+    // --- MEZAR TAŞI (Bebek) ---
+    ...Array.from({ length: 7 }, (_, i) => ({ code: `MB0${(i + 1).toString().padStart(2, '0')}`, title: "Bebek Mezarı", image: img(`/cocuk-mezar${i + 1}.jpg`), desc: "Özenle ve hassasiyetle tasarlanmış, sade görünümlü mermer bebek mezar modellerimiz.", href: "/koleksiyonlar/mezar-tasi" })),
+
+    // --- MEZAR TAŞI (Farklı) ---
+    ...Array.from({ length: 20 }, (_, i) => ({ code: `MF0${(i + 1).toString().padStart(2, '0')}`, title: "Özel Tasarım Mezar", image: img(`/farkli-mezar${i + 1}.jpg`), desc: "Alışılmışın dışında özel tasarım ve mimari dokunuşlarla hazırlanan eşsiz sanat eseri modeller.", href: "/koleksiyonlar/mezar-tasi" })),
+
+    // --- MEZAR TAŞI (Ağaç) ---
+    { code: "MG001", title: "Ağaç Mezar", image: img("/agac-mezar1.jpg"), desc: "Doğal ağaç formlarından ilham alınarak tasarlanmış, eşsiz mermer mezar modeli.", href: "/koleksiyonlar/mezar-tasi" },
+    { code: "MG002", title: "Ağaç Mezar", image: img("/agac-mezar2.jpg"), desc: "Ağaç gövdesi temalı, doğayla bütünleşen özgün mermer mezar tasarımı.", href: "/koleksiyonlar/mezar-tasi" },
+    { code: "MG003", title: "Ağaç Mezar", image: img("/agac-mezar3.jpg"), desc: "Zarif ağaç motiflerle süslenmiş, doğal ve huzurlu bir anıt mezar.", href: "/koleksiyonlar/mezar-tasi" },
+
+    // --- MEZAR TAŞI (İşlemeli) ---
+    ...Array.from({ length: 17 }, (_, i) => ({ code: `MI0${(i + 1).toString().padStart(2, '0')}`, title: "İşlemeli Mezar", image: img(`/islemeli-mezar${i + 1}.png`), desc: "Usta ellerde şekillenen, ince işçilikle nakşedilmiş sanatsal mermer mezar modelleri.", href: "/koleksiyonlar/mezar-tasi" })),
+
+    // --- BAŞ TAŞI (ek ürünler) ---
+    ...([3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27].map(n => ({ code: `B0${n.toString().padStart(2, '0')}`, title: "Mermer Baş Taşı", image: img(`/bas-tasi${n}.jpg`), desc: "Zarif detaylar ve klasik hatlara sahip, dayanıklı mermer baş taşı.", href: "/koleksiyonlar/mermer-bas-tasi" }))),
+
+    // --- BANYO & HAMAM ---
+    ...Array.from({ length: 10 }, (_, i) => ({ code: `BH0${(i + 1).toString().padStart(2, '0')}`, title: "Banyo & Hamam Tasarımı", image: img(`/hamam-urun${i + 1}.png`), desc: "Mermerin eşsiz dokusuyla tasarlanmış, şık ve uzun ömürlü banyo ve hamam uygulaması.", href: "/koleksiyonlar/banyo-hamam" })),
+
+    // --- ABDESTHANE ---
+    ...([1, 2, 3, 5, 6].map((n, i) => ({ code: `AB0${(i + 1).toString().padStart(2, '0')}`, title: "Abdesthane Tasarımı", image: img(`/abdesthane${n}.jpg`), desc: "Doğal mermerden üretilmiş, geleneksel mimariye uyumlu estetik ve fonksiyonel abdesthane uygulaması.", href: "/koleksiyonlar/abdesthane" }))),
 ];
 

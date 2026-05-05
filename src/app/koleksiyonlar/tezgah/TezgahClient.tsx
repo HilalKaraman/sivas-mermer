@@ -22,7 +22,14 @@ export default function TezgahClient() {
         { code: "T005", title: "Mutfak Tezgahı", image: img("/tezgah-urun4.png"), desc: "Doğal granitin eşsiz renkleriyle mutfağınıza değer katın." },
         { code: "T006", title: "Mutfak Tezgahı", image: img("/tezgah-urun5.png"), desc: "Mutfaklar için suya dayanıklı ve estetik tezgah çözümleri." },
         { code: "T007", title: "Özel Kesim Tezgah", image: img("/tezgah-urun6.png"), desc: "Projenize uygun özel ölçülerde kesilmiş mermer ve granit tezgahlar." },
-        { code: "T008", title: "Banyo Tezgahı", image: img("/tezgah-urun7.png"), desc: "Estetik görünümü ile banyolarınızın havasını değiştirecek tezgah modeli." }
+        { code: "T008", title: "Banyo Tezgahı", image: img("/tezgah-urun7.png"), desc: "Estetik görünümü ile banyolarınızın havasını değiştirecek tezgah modeli." },
+        { code: "T009", title: "Granit Mutfak Tezgahı", image: img("/tezgah11.png"), desc: "Doğal granitin benzersiz desenleriyle mutfağınıza zarif bir dokunuş." },
+        { code: "T010", title: "Modern Granit Tezgah", image: img("/tezgah12.png"), desc: "Çağdaş tasarım anlayışıyla üretilen yüksek kaliteli granit tezgah." },
+        { code: "T014", title: "Premium Granit Tezgah", image: img("/tezgah16.png"), desc: "Üst düzey kalite ve şıklık sunan premium granit tezgah çözümleri." },
+        { code: "T015", title: "Granit Tezgah Tasarımı", image: img("/tezgah17.png"), desc: "Modern ve klasik çizgileri bir arada sunan granit tezgah tasarımı." },
+        { code: "T016", title: "Doğal Granit Tezgah", image: img("/tezgah18.png"), desc: "Doğanın eşsiz dokusunu mutfağınıza yansıtan doğal granit tezgah." },
+        { code: "T017", title: "Granit Ada Tezgah", image: img("/tezgah19.png"), desc: "Geniş mutfaklar için ideal, şık ve fonksiyonel granit ada tezgah." },
+        { code: "T018", title: "Lüks Granit Tezgah", image: img("/tezgah20.png"), desc: "Lüks yaşam alanlarına yakışır, üstün kaliteli granit tezgah modeli." }
     ];
 
     const agacImageIndices = [14, 15, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
@@ -92,7 +99,7 @@ export default function TezgahClient() {
     };
 
     const categories = [
-        { id: "mermer" as CategoryType, title: "Mermer Tezgah", image: img("/tezgah.png"), desc: "Doğal mermer ve granitin eşsiz dokusuyla mutfağınıza değer katan dayanıklı tezgah çözümleri." },
+        { id: "mermer" as CategoryType, title: "Granit Tezgah", image: img("/tezgah.png"), desc: "Doğal mermer ve granitin eşsiz dokusuyla mutfağınıza değer katan dayanıklı tezgah çözümleri." },
         { id: "cam" as CategoryType, title: "Cam Mutfak ve Tezgah", image: img("/cam-tezgah1.jpg"), desc: "Modern, hijyenik ve kolay temizlenebilir yapısıyla mutfaklara ferahlık katan şık cam tezgahlar." },
         { id: "beton" as CategoryType, title: "Beton Tezgah", image: img("/beton-tezgah1.jpg"), desc: "Endüstriyel görünümü ve ultra dayanıklılığı ile öne çıkan, modern beton tezgâh tasarımları." },
         { id: "belanko" as CategoryType, title: "Belanko Tezgah", image: img("/belanko-tezgah1.jpg"), desc: "Şıklığı ve leke tutmayan kuvars yapısıyla uzun ömürlü kullanım sunan belanko tezgah modelleri." },
@@ -135,7 +142,7 @@ export default function TezgahClient() {
                                         src={cat.image}
                                         alt={cat.title}
                                         fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                         onError={(e) => {
                                             e.currentTarget.style.display = 'none';
@@ -188,7 +195,7 @@ export default function TezgahClient() {
                                                 src={item.image}
                                                 alt={item.title}
                                                 fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                                             />
                                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />

@@ -1,18 +1,23 @@
 import type { MetadataRoute } from "next";
-import { products } from "../data/products";
+import { products, categories } from "../data/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://sivasmermer.com";
 
-    // Only generate URLs for products
-    const allItems = [...products];
-
-    // Generate dynamic URLs
-    const dynamicUrls = allItems.map((item) => ({
+    // Ürün malzemeleri (traverten, granit vb.)
+    const productUrls = products.map((item) => ({
         url: `${baseUrl}/${item.id}`,
         lastModified: new Date(),
         changeFrequency: "weekly" as const,
         priority: 0.7,
+    }));
+
+    // Koleksiyon sayfaları (mezar-tasi, tezgah, cesme vb.)
+    const collectionUrls = categories.map((item) => ({
+        url: `${baseUrl}/${item.id}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
     }));
 
     return [
@@ -40,6 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "monthly",
             priority: 0.8,
         },
-        ...dynamicUrls,
+        {
+            url: `${baseUrl}/projeler`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        ...collectionUrls,
+        ...productUrls,
     ];
 }
