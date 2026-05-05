@@ -73,3 +73,49 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--charcoal);
 }
+
+/* ===== Scroll Reveal ===== */
+.scroll-reveal {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) !important;
+}
+
+/* ===== 404 Page Entrance ===== */
+@keyframes entrance-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes entrance-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-entrance-scale {
+  opacity: 0;
+  animation: entrance-scale 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-entrance-up {
+  opacity: 0;
+  animation: entrance-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

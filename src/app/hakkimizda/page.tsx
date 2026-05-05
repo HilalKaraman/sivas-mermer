@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ScrollReveal from "../components/ScrollReveal";
 
 export const metadata: Metadata = {
     title: "Hakkımızda | Sivas Mermer - Tarihçemiz ve Değerlerimiz",
@@ -12,13 +13,15 @@ export default function AboutPage() {
             {/* Hero Section */}
             <section className="relative px-4 sm:px-6 lg:px-8 py-16 mb-12">
                 <div className="max-w-7xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold text-[var(--charcoal)] mb-6 tracking-tight">
-                        Hakkımızda
-                    </h1>
-                    <div className="w-24 h-1 bg-[var(--gold)] mx-auto mb-8"></div>
-                    <p className="max-w-3xl mx-auto text-lg text-[var(--grey-dark)] leading-relaxed">
-                        Sivas Mermer olarak, doğanın en saf halini sanatla buluşturuyor, mekanlarınıza değer katıyoruz.
-                    </p>
+                    <ScrollReveal>
+                        <h1 className="text-4xl md:text-5xl font-bold text-[var(--charcoal)] mb-6 tracking-tight">
+                            Hakkımızda
+                        </h1>
+                        <div className="w-24 h-1 bg-[var(--gold)] mx-auto mb-8"></div>
+                        <p className="max-w-3xl mx-auto text-lg text-[var(--grey-dark)] leading-relaxed">
+                            Sivas Mermer olarak, doğanın en saf halini sanatla buluşturuyor, mekanlarınıza değer katıyoruz.
+                        </p>
+                    </ScrollReveal>
                 </div>
             </section>
 
@@ -27,66 +30,70 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                         {/* Misyon Kartı */}
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-[var(--border-light)] hover:shadow-md transition-shadow">
-                            <div className="w-12 h-12 bg-[var(--cream-dark)] rounded-full flex items-center justify-center mb-6">
-                                <svg className="w-6 h-6 text-[var(--gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
+                        <ScrollReveal direction="left" duration={800}>
+                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-[var(--border-light)] hover:shadow-md transition-shadow">
+                                <div className="w-12 h-12 bg-[var(--cream-dark)] rounded-full flex items-center justify-center mb-6">
+                                    <svg className="w-6 h-6 text-[var(--gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h2 className="text-2xl font-bold text-[var(--charcoal)] mb-4">Misyonumuz &amp; Hedeflerimiz</h2>
+                                <ul className="space-y-3 text-[var(--grey-dark)]">
+                                    <li className="flex items-start gap-3">
+                                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
+                                        <span>Mevcut üretim potansiyelini verimli ve etkin bir şekilde kullanmak.</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
+                                        <span>Her geçen gün üretim kapasitesini arttırmak ve kaliteli ürünü zamanında teslim etmek.</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
+                                        <span>Uygun zamanda ve zeminde sürekli büyüme ve gelişmeyi sağlamak.</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <h2 className="text-2xl font-bold text-[var(--charcoal)] mb-4">Misyonumuz & Hedeflerimiz</h2>
-                            <ul className="space-y-3 text-[var(--grey-dark)]">
-                                <li className="flex items-start gap-3">
-                                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
-                                    <span>Mevcut üretim potansiyelini verimli ve etkin bir şekilde kullanmak.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
-                                    <span>Her geçen gün üretim kapasitesini arttırmak ve kaliteli ürünü zamanında teslim etmek.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
-                                    <span>Uygun zamanda ve zeminde sürekli büyüme ve gelişmeyi sağlamak.</span>
-                                </li>
-                            </ul>
-                        </div>
+                        </ScrollReveal>
 
                         {/* Strateji Kartı */}
-                        <div className="bg-[var(--charcoal)] p-8 rounded-2xl shadow-sm text-white">
-                            <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6">
-                                <svg className="w-6 h-6 text-[var(--gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                </svg>
+                        <ScrollReveal direction="right" duration={800} delay={200}>
+                            <div className="bg-[var(--charcoal)] p-8 rounded-2xl shadow-sm text-white">
+                                <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6">
+                                    <svg className="w-6 h-6 text-[var(--gold)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    </svg>
+                                </div>
+                                <h2 className="text-2xl font-bold mb-4">Stratejik Yaklaşımımız</h2>
+                                <ul className="space-y-3 text-gray-300">
+                                    <li className="flex items-start gap-3">
+                                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
+                                        <span>Stratejimizi belirlerken müşteri istek ve beklentilerini dikkate almak.</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
+                                        <span>Firma faaliyetlerimizi toplam kalite yönetimi felsefesi ile yürütmek.</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
+                                        <span>Tedarikçilerimize ve müşterilerimize güvenilir bir çözüm ortağı olmak.</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <h2 className="text-2xl font-bold mb-4">Stratejik Yaklaşımımız</h2>
-                            <ul className="space-y-3 text-gray-300">
-                                <li className="flex items-start gap-3">
-                                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
-                                    <span>Stratejimizi belirlerken müşteri istek ve beklentilerini dikkate almak.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
-                                    <span>Firma faaliyetlerimizi toplam kalite yönetimi felsefesi ile yürütmek.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0"></span>
-                                    <span>Tedarikçilerimize ve müşterilerimize güvenilir bir çözüm ortağı olmak.</span>
-                                </li>
-                            </ul>
-                        </div>
+                        </ScrollReveal>
                     </div>
 
                     {/* Değerlerimiz */}
                     <div className="mb-12">
-                        <div className="text-center mb-12">
+                        <ScrollReveal className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-[var(--charcoal)] mb-4">Değerlerimiz</h2>
                             <p className="text-[var(--grey-medium)]">Bizi biz yapan temel prensiplerimiz</p>
-                        </div>
+                        </ScrollReveal>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
                                 {
                                     title: "İnsan ve Toplum",
-                                    desc: "Topluma katkıda bulunan ve adil olarak tüm faaliyetlerimizde İNSAN’A DEĞER VERMEK önceliğimizdir.",
+                                    desc: "Topluma katkıda bulunan ve adil olarak tüm faaliyetlerimizde İNSAN'A DEĞER VERMEK önceliğimizdir.",
                                     icon: (
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                                     )
@@ -127,17 +134,19 @@ export default function AboutPage() {
                                     )
                                 }
                             ].map((item, index) => (
-                                <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-[var(--border-light)] hover:shadow-md transition-all group">
-                                    <div className="w-10 h-10 bg-[var(--cream)] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[var(--gold)] transition-colors">
-                                        <svg className="w-5 h-5 text-[var(--gold)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            {item.icon}
-                                        </svg>
+                                <ScrollReveal key={index} delay={(index % 3) * 150} duration={600}>
+                                    <div className="bg-white p-6 rounded-xl shadow-sm border border-[var(--border-light)] hover:shadow-md transition-all group">
+                                        <div className="w-10 h-10 bg-[var(--cream)] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[var(--gold)] transition-colors">
+                                            <svg className="w-5 h-5 text-[var(--gold)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                {item.icon}
+                                            </svg>
+                                        </div>
+                                        <h3 className="text-lg font-bold text-[var(--charcoal)] mb-2">{item.title}</h3>
+                                        <p className="text-sm text-[var(--grey-dark)] leading-relaxed">
+                                            {item.desc}
+                                        </p>
                                     </div>
-                                    <h3 className="text-lg font-bold text-[var(--charcoal)] mb-2">{item.title}</h3>
-                                    <p className="text-sm text-[var(--grey-dark)] leading-relaxed">
-                                        {item.desc}
-                                    </p>
-                                </div>
+                                </ScrollReveal>
                             ))}
                         </div>
                     </div>

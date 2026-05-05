@@ -11,7 +11,7 @@ export default function NotFound() {
         <main className="min-h-[calc(100vh-80px)] bg-[var(--cream)] flex items-center justify-center px-4 py-16">
             <div className="max-w-2xl w-full text-center">
                 {/* Decorative 404 */}
-                <div className="relative mb-8">
+                <div className="relative mb-8 animate-entrance-scale" style={{ animationDelay: "0.1s" }}>
                     <span className="text-[10rem] sm:text-[14rem] font-bold leading-none tracking-tighter text-transparent select-none"
                         style={{
                             WebkitTextStroke: "2px var(--border-medium)",
@@ -42,15 +42,15 @@ export default function NotFound() {
                 </div>
 
                 {/* Content */}
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--charcoal)] mb-4 tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--charcoal)] mb-4 tracking-tight animate-entrance-up" style={{ animationDelay: "0.3s" }}>
                     Sayfa Bulunamadı
                 </h1>
-                <p className="text-[var(--grey-medium)] text-base sm:text-lg leading-relaxed mb-10 max-w-lg mx-auto">
+                <p className="text-[var(--grey-medium)] text-base sm:text-lg leading-relaxed mb-10 max-w-lg mx-auto animate-entrance-up" style={{ animationDelay: "0.45s" }}>
                     Aradığınız sayfa kaldırılmış, adı değiştirilmiş veya geçici olarak kullanılamıyor olabilir.
                 </p>
 
                 {/* Actions */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-entrance-up" style={{ animationDelay: "0.6s" }}>
                     <Link
                         href="/"
                         className="inline-flex items-center gap-2 px-8 py-3.5 bg-[var(--gold)] text-white font-medium rounded-lg hover:bg-[var(--gold-light)] transition-colors duration-300 text-sm uppercase tracking-wider"
@@ -74,7 +74,7 @@ export default function NotFound() {
                 </div>
 
                 {/* Helpful links */}
-                <div className="mt-14 pt-8 border-t border-[var(--border-light)]">
+                <div className="mt-14 pt-8 border-t border-[var(--border-light)] animate-entrance-up" style={{ animationDelay: "0.75s" }}>
                     <p className="text-xs uppercase tracking-[0.2em] text-[var(--grey-light)] mb-4 font-medium">
                         Popüler Sayfalar
                     </p>
